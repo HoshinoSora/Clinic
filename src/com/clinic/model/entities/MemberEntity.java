@@ -1,29 +1,41 @@
 package com.clinic.model.entities;
 
-public class AdminEntity {
-	private int adminId;
-	private String adminName;
+import java.util.Date;
+
+public class MemberEntity {
+	private int id;
+	private String name;
+	private String identityCard;
 	private String role;
 	private String gender;
+	private Date dateOfBirth;
 	private String address;
 	private String phoneNumber;
 	private String email;
 	private String password;
 
-	public int getAdminId() {
-		return adminId;
+	public int getId() {
+		return id;
 	}
 
-	public void setAdminId(int adminId) {
-		this.adminId = adminId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getAdminName() {
-		return adminName;
+	public String getName() {
+		return name;
 	}
 
-	public void setAdminName(String adminName) {
-		this.adminName = adminName;
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getIdentityCard() {
+		return identityCard;
+	}
+
+	public void setIdentityCard(String identityCard) {
+		this.identityCard = identityCard;
 	}
 
 	public String getRole() {
@@ -40,6 +52,14 @@ public class AdminEntity {
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 
 	public String getAddress() {
