@@ -15,9 +15,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-	minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0"
-	xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinic.controller.MemberController">
 	<children>
 		<MenuBar>
 			<menus>
@@ -25,8 +23,7 @@
 				<Menu mnemonicParsing="false" onAction="#AdViewDoctor" text="View Doctor" />
 				<Menu mnemonicParsing="false" onAction="#AdViewReception" text="View Receptionist" />
 				<Menu mnemonicParsing="false" onAction="#AdViewPatient" text="View Patient" />
-				<Menu mnemonicParsing="false" onAction="#AdChangePassword"
-					text="Change Password" />
+				<Menu mnemonicParsing="false" onAction="#AdChangePassword" text="Change Password" />
 				<Menu mnemonicParsing="false" onAction="#AdLogout" text="Logout" />
 			</menus>
 			<VBox.margin>
@@ -35,19 +32,14 @@
 		</MenuBar>
 		<StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 			<children>
-				<VBox fx:id="AdVbAddDoctor" prefHeight="200.0" prefWidth="100.0"
-					visible="false">
+				<VBox fx:id="AdVbAddDoctor" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
-						<Label alignment="CENTER" contentDisplay="CENTER" disable="true"
-							nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0"
-							text="Add Member">
+						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Add Member">
 							<VBox.margin>
 								<Insets />
 							</VBox.margin>
 							<graphic>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT"
-									disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0"
-									prefWidth="650.0" text="Robot Diversity Clinic Management System" />
+								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Robot Diversity Clinic Management System" />
 							</graphic>
 						</Label>
 						<VBox prefHeight="250.0" prefWidth="100.0">
@@ -89,8 +81,7 @@
 								<HBox prefHeight="100.0" prefWidth="200.0">
 									<children>
 										<Label prefWidth="100.0" text="       Gender" />
-										<RadioButton mnemonicParsing="false" prefWidth="70.0"
-											text="Male" />
+										<RadioButton mnemonicParsing="false" prefWidth="70.0" text="Male" />
 										<RadioButton mnemonicParsing="false" text="Female">
 											<HBox.margin>
 												<Insets right="70.0" />
@@ -162,16 +153,11 @@
 						</TableView>
 					</children>
 				</VBox>
-				<VBox fx:id="AdVbViewDoctor" alignment="TOP_CENTER" prefHeight="200.0"
-					prefWidth="100.0" visible="false">
+				<VBox fx:id="AdVbViewDoctor" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
-						<Label alignment="CENTER" contentDisplay="CENTER" disable="true"
-							nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0"
-							text="View Doctor">
+						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="View Doctor">
 							<graphic>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT"
-									disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0"
-									prefWidth="650.0" text="Robot Diversity Clinic Management System" />
+								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Robot Diversity Clinic Management System" />
 							</graphic>
 						</Label>
 						<HBox alignment="CENTER" prefHeight="84.0" prefWidth="700.0">
@@ -198,16 +184,11 @@
 						</TableView>
 					</children>
 				</VBox>
-				<VBox fx:id="AdVbViewReceptionist" alignment="TOP_CENTER"
-					prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="AdVbViewReceptionist" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
-						<Label alignment="CENTER" contentDisplay="CENTER" disable="true"
-							nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0"
-							text="View Receptionist">
+						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="View Receptionist">
 							<graphic>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT"
-									disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0"
-									prefWidth="650.0" text="Robot Diversity Clinic Management System" />
+								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Robot Diversity Clinic Management System" />
 							</graphic>
 						</Label>
 						<HBox alignment="CENTER" prefHeight="84.0" prefWidth="700.0">
@@ -234,16 +215,11 @@
 						</TableView>
 					</children>
 				</VBox>
-				<VBox fx:id="AdVbViewPatient" alignment="TOP_CENTER"
-					prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="AdVbViewPatient" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
-						<Label alignment="CENTER" contentDisplay="CENTER" disable="true"
-							nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0"
-							text="View Patient">
+						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="View Patient">
 							<graphic>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT"
-									disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0"
-									prefWidth="650.0" text="Robot Diversity Clinic Management System" />
+								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Robot Diversity Clinic Management System" />
 							</graphic>
 						</Label>
 						<HBox alignment="CENTER" prefHeight="84.0" prefWidth="700.0">
@@ -270,21 +246,16 @@
 						</TableView>
 					</children>
 				</VBox>
-				<VBox fx:id="AdChangePassword" alignment="TOP_CENTER"
-					prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="AdChangePassword" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
-						<Label alignment="CENTER" contentDisplay="CENTER"
-							prefHeight="70.0" prefWidth="650.0" text="Changed Password">
+						<Label alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="650.0" text="Changed Password">
 							<graphic>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT"
-									disable="true" prefWidth="650.0"
-									text="Robot Diversity Clinic Management System" />
+								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" prefWidth="650.0" text="Robot Diversity Clinic Management System" />
 							</graphic>
 						</Label>
 						<HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
 							<children>
-								<Label alignment="CENTER_RIGHT" prefHeight="20.0"
-									prefWidth="150.0" text="Old Password   :">
+								<Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="150.0" text="Old Password   :">
 									<HBox.margin>
 										<Insets />
 									</HBox.margin>
@@ -298,8 +269,7 @@
 						</HBox>
 						<HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
 							<children>
-								<Label alignment="CENTER_RIGHT" prefHeight="20.0"
-									prefWidth="150.0" text="New Password   :">
+								<Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="150.0" text="New Password   :">
 									<HBox.margin>
 										<Insets />
 									</HBox.margin>
@@ -313,8 +283,7 @@
 						</HBox>
 						<HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
 							<children>
-								<Label alignment="CENTER_RIGHT" contentDisplay="CENTER"
-									prefHeight="20.0" prefWidth="150.0" text="Re-Type New Password   : ">
+								<Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="20.0" prefWidth="150.0" text="Re-Type New Password   : ">
 									<HBox.margin>
 										<Insets />
 									</HBox.margin>

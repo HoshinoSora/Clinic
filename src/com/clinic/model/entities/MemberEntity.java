@@ -1,14 +1,12 @@
 package com.clinic.model.entities;
 
-import java.util.Date;
-
 public class MemberEntity {
-	private int memberId;
+	private String memberId;
 	private String memberName;
 	private String memberIdCard;
 	private Role role;
 	private String memberGender;
-	private Date dateOfBirth;
+	private String dateOfBirth;
 	private String memberAddress;
 	private String memberPhone;
 	private String memberEmail;
@@ -18,11 +16,11 @@ public class MemberEntity {
 		Admin, Doctor, Receptionist
 	}
 
-	public int getId() {
+	public String getId() {
 		return memberId;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.memberId = id;
 	}
 
@@ -58,11 +56,11 @@ public class MemberEntity {
 		this.memberGender = gender;
 	}
 
-	public Date getDateOfBirth() {
+	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(Date dateOfBirth) {
+	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
