@@ -1,4 +1,4 @@
-package com.clinic.members;
+package com.clinic.model.entities;
 
 import java.util.Date;
 

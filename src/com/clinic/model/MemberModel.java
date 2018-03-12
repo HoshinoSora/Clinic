@@ -1,4 +1,4 @@
-package com.clinic.members;
+package com.clinic.model;
 
 public class MemberModel {
 	

@@ -1,9 +1,10 @@
-package com.clinic.login;
+package com.clinic.controller;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
@@ -36,10 +37,11 @@ public class LoginController {
 	@FXML
 	void toLoginForm(ActionEvent event) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("Loginform.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("../view/Loginform.fxml"));
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.show();
+			((Node)(event.getSource())).getScene().getWindow().hide();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -1,4 +1,4 @@
-package com.clinic.login;
+package com.clinic.controller;
 
 public class MemberController {
 
