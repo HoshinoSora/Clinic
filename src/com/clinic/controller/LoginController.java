@@ -8,15 +8,21 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class LoginController {
+	
+	@FXML
+	private VBox home;
+	
+	@FXML
+	private VBox login;
 
 	@FXML
 	private TextField userName;
@@ -47,7 +53,7 @@ public class LoginController {
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.show();
-			((Node) (event.getSource())).getScene().getWindow().hide();
+			home.getScene().getWindow().hide();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -66,7 +72,7 @@ public class LoginController {
 				str = "../view/Reception.fxml";
 			}
 			MemberController.showView(str);
-			((Node) (event.getSource())).getScene().getWindow().hide();
+			login.getScene().getWindow().hide();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -3,10 +3,17 @@ package com.clinic.controller;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class AdminController {
+
+	@FXML
+	private VBox admin;
 
 	@FXML
 	private MenuItem addMember;
@@ -54,7 +61,7 @@ public class AdminController {
 				adChangePassword.visibleProperty().set(false);
 			}
 		});
-		
+
 		changePassword.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -66,17 +73,24 @@ public class AdminController {
 				adChangePassword.visibleProperty().set(true);
 			}
 		});
-		
+
 		logout.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
 			public void handle(ActionEvent event) {
-				System.out.println("blah");
+				try {
+					Parent root = FXMLLoader.load(getClass().getResource("../view/Loginform.fxml"));
+					Stage stage = new Stage();
+					stage.setScene(new Scene(root));
+					stage.show();
+					admin.getScene().getWindow().hide();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 		});
 	}
 
-	
 	@FXML
 	void ViewMenu(ActionEvent event) {
 		viewDoctor.setOnAction(new EventHandler<ActionEvent>() {
@@ -90,7 +104,7 @@ public class AdminController {
 				adChangePassword.visibleProperty().set(false);
 			}
 		});
-		
+
 		viewPatient.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -102,7 +116,7 @@ public class AdminController {
 				adChangePassword.visibleProperty().set(false);
 			}
 		});
-		
+
 		viewReception.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override

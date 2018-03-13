@@ -15,28 +15,20 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinic.controller.MemberController">
+<VBox fx:id="doctor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinic.controller.DoctorController">
 	<children>
 		<MenuBar>
 			<menus>
-				<Menu mnemonicParsing="false" onAction="#DoViewPatient" text="View Patient">
+				<Menu mnemonicParsing="false" onAction="#PatientMenu" text="Patient">
 					<items>
-						<MenuItem mnemonicParsing="false" text="Close" />
+						<MenuItem fx:id="viewPatient" mnemonicParsing="false" text="View Patient" />
+                  <MenuItem fx:id="addPrescription" mnemonicParsing="false" text="Add Prescription" />
 					</items>
 				</Menu>
-				<Menu mnemonicParsing="false" onAction="#DoAddPrescription" text="Add Prescription">
+				<Menu mnemonicParsing="false" onAction="#EditMenu" text="Edit">
 					<items>
-						<MenuItem mnemonicParsing="false" text="Delete" />
-					</items>
-				</Menu>
-				<Menu mnemonicParsing="false" onAction="#DoChangePassword" text="Change Password">
-					<items>
-						<MenuItem mnemonicParsing="false" text="Action 1" />
-					</items>
-				</Menu>
-				<Menu mnemonicParsing="false" onAction="#DoLogout" text="Logout">
-					<items>
-						<MenuItem mnemonicParsing="false" text="Action 1" />
+						<MenuItem fx:id="changePassword" mnemonicParsing="false" text="Change Password" />
+                  <MenuItem fx:id="logout" mnemonicParsing="false" text="Logout" />
 					</items>
 				</Menu>
 			</menus>
@@ -46,7 +38,7 @@
 		</MenuBar>
 		<StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 			<children>
-				<VBox fx:id="DoVbViewPatient" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="doVbViewPatient" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="View Patient">
 							<graphic>
@@ -77,7 +69,7 @@
 						</TableView>
 					</children>
 				</VBox>
-				<VBox fx:id="DoVbAddPrescription" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="doVbAddPrescription" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
 						<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Robot Diversity Clinic Management System" />
 						<HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
@@ -124,7 +116,7 @@
 						<Button mnemonicParsing="false" prefWidth="60.0" text="Submit" />
 					</children>
 				</VBox>
-				<VBox fx:id="DoVbChangePassword" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="doVbChangePassword" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="650.0" text="Changed Password">
 							<graphic>

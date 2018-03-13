@@ -30,10 +30,41 @@ public class MemberLoginModel {
 				return getMember(rSet);
 			}
 
-		} catch (Exception e) {
+		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 
+		return null;
+	}
+
+	public void create(MemberEntity member) {
+		String str = "insert into .......";
+		try {
+			Connection conn = gettingConnection();
+			PreparedStatement pStatement = conn.prepareStatement(str);
+			pStatement.setString(1, member.getName());
+
+		} catch (SQLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public MemberEntity findByName(String name) {
+
+		String str = "select ... from ... ... where ...";
+		try {
+			Connection conn = gettingConnection();
+			PreparedStatement pStatement = conn.prepareStatement(str);
+			pStatement.setString(1, name);
+			ResultSet rSet = pStatement.executeQuery();
+
+			while (rSet.next()) {
+				return getMember(rSet);
+			}
+
+		} catch (SQLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
 		return null;
 	}
 
