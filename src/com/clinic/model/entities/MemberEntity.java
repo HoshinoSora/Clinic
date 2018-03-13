@@ -1,7 +1,7 @@
 package com.clinic.model.entities;
 
 public class MemberEntity {
-	private String memberId;
+	private int memberId;
 	private String memberName;
 	private String memberIdCard;
 	private Role role;
@@ -16,11 +16,11 @@ public class MemberEntity {
 		Admin, Doctor, Receptionist
 	}
 
-	public String getId() {
+	public int getId() {
 		return memberId;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.memberId = id;
 	}
 
