@@ -1,5 +1,9 @@
 package com.clinic.controller;
 
+import com.clinic.model.MemberLoginModel;
+import com.clinic.model.entities.MemberEntity;
+import com.clinic.model.entities.MemberEntity.Role;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,6 +33,8 @@ public class LoginController {
 	@FXML
 	private RadioButton receptionRole;
 
+	private MemberLoginModel memberLogin;
+
 	@FXML
 	void close(ActionEvent event) {
 		Platform.exit();
@@ -41,16 +47,26 @@ public class LoginController {
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.show();
-			((Node)(event.getSource())).getScene().getWindow().hide();
+			((Node) (event.getSource())).getScene().getWindow().hide();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
 	@FXML
-	public static void login(ActionEvent event) {
+	void login(ActionEvent event) {
 		try {
-
+			String str = null;
+			MemberEntity member = memberLogin.find(userName.getText(), password.getText());
+			if (member.getRole() == Role.Admin) {
+				str = "../view/Admin.fxml";
+			} else if (member.getRole() == Role.Doctor) {
+				str = "../view/Doctor.fxml";
+			} else {
+				str = "../view/Reception.fxml";
+			}
+			MemberController.showView(str);
+			((Node) (event.getSource())).getScene().getWindow().hide();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

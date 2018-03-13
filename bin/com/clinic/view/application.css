@@ -1,27 +1,11 @@
 #homeLabel{
 	-fx-text-fill: #EECC7D;
 	-fx-font-size:20.0px;
-	-fx-font-size:25.0px;	
-}
-#homeBtn{
-	-fx-color:#AAFFFF;
-}
-#LoginPane{
-	-fx-background-image:url("images/1.jpg");
-	-fx-background-repeat:stretch;
-	-fx-background-size:500.0 300.0;
-	-fx-background-position: center center;
-}
-#homeButton{
-	-fx-text-fill: #7FFF7F;
-	-fx-background-color:#FF6612;
-	-fx-effect:dropshadow(three-pass-box,pink,30.0,0.5,0.0,0.0);
-	-fx-font-size:20.0px;
 	
 }
-	
 
 #homeButton{
+	-fx-text-fill: #7FFF7F;
 	-fx-background-color:#FF6612;
 }
 .root{
