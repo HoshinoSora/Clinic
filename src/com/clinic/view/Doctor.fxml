@@ -15,167 +15,166 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinic.controller.MemberController">
-	<children>
-		<MenuBar>
-			<menus>
-				<Menu mnemonicParsing="false" onAction="#DoViewPatient" text="View Patient">
-					<items>
-						<MenuItem mnemonicParsing="false" text="Close" />
-					</items>
-				</Menu>
-				<Menu mnemonicParsing="false" onAction="#DoAddPrescription" text="Add Prescription">
-					<items>
-						<MenuItem mnemonicParsing="false" text="Delete" />
-					</items>
-				</Menu>
-				<Menu mnemonicParsing="false" onAction="#DoChangePassword" text="Change Password">
-					<items>
-						<MenuItem mnemonicParsing="false" text="Action 1" />
-					</items>
-				</Menu>
-				<Menu mnemonicParsing="false" onAction="#DoLogout" text="Logout">
-					<items>
-						<MenuItem mnemonicParsing="false" text="Action 1" />
-					</items>
-				</Menu>
-			</menus>
-			<VBox.margin>
-				<Insets />
-			</VBox.margin>
-		</MenuBar>
-		<StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-			<children>
-				<VBox fx:id="DoVbViewPatient" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
-					<children>
-						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="View Patient">
-							<graphic>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Robot Diversity Clinic Management System" />
-							</graphic>
-						</Label>
-						<HBox alignment="CENTER" prefHeight="84.0" prefWidth="700.0">
-							<children>
-								<Label text="Patient ID   :   " />
-								<TextField />
-							</children>
-						</HBox>
-						<Label prefHeight="50.0" />
-						<Button maxWidth="60.0" mnemonicParsing="false" text="Submit" />
-						<TableView prefHeight="200.0" prefWidth="200.0">
-							<columns>
-								<TableColumn prefWidth="70.0" text="C1" />
-								<TableColumn prefWidth="70.0" text="C2" />
-								<TableColumn prefWidth="70.0" text="C3" />
-								<TableColumn prefWidth="70.0" text="C4" />
-								<TableColumn prefWidth="70.0" text="C5" />
-								<TableColumn prefWidth="70.0" text="C6" />
-								<TableColumn prefWidth="70.0" text="C7" />
-								<TableColumn prefWidth="70.0" text="C8" />
-								<TableColumn prefWidth="70.0" text="C9" />
-								<TableColumn prefWidth="70.0" text="C10" />
-							</columns>
-						</TableView>
-					</children>
-				</VBox>
-				<VBox fx:id="DoVbAddPrescription" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
-					<children>
-						<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Robot Diversity Clinic Management System" />
-						<HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
-							<children>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="84.0" text="Patient ID   :" />
-								<TextField prefWidth="165.0">
-									<HBox.margin>
-										<Insets left="10.0" />
-									</HBox.margin>
-								</TextField>
-							</children>
-						</HBox>
-						<HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
-							<children>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="81.0" text="Name   :" />
-								<TextField prefWidth="165.0">
-									<HBox.margin>
-										<Insets left="10.0" />
-									</HBox.margin>
-								</TextField>
-							</children>
-						</HBox>
-						<HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
-							<children>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="85.0" text="Disease   :" />
-								<TextField prefWidth="165.0">
-									<HBox.margin>
-										<Insets left="10.0" />
-									</HBox.margin>
-								</TextField>
-							</children>
-						</HBox>
-						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-							<children>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="83.0" text="Prescription   :" />
-								<TextArea prefHeight="100.0" prefWidth="165.0">
-									<HBox.margin>
-										<Insets left="10.0" />
-									</HBox.margin>
-								</TextArea>
-							</children>
-						</HBox>
-						<Label />
-						<Button mnemonicParsing="false" prefWidth="60.0" text="Submit" />
-					</children>
-				</VBox>
-				<VBox fx:id="DoVbChangePassword" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
-					<children>
-						<Label alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="650.0" text="Changed Password">
-							<graphic>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" prefWidth="650.0" text="Robot Diversity Clinic Management System" />
-							</graphic>
-						</Label>
-						<HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
-							<children>
-								<Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="150.0" text="Old Password   :">
-									<HBox.margin>
-										<Insets />
-									</HBox.margin>
-								</Label>
-								<PasswordField>
-									<HBox.margin>
-										<Insets left="10.0" />
-									</HBox.margin>
-								</PasswordField>
-							</children>
-						</HBox>
-						<HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
-							<children>
-								<Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="150.0" text="New Password   :">
-									<HBox.margin>
-										<Insets />
-									</HBox.margin>
-								</Label>
-								<PasswordField />
-							</children>
-							<VBox.margin>
-								<Insets left="10.0" />
-							</VBox.margin>
-						</HBox>
-						<HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
-							<children>
-								<Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="20.0" prefWidth="150.0" text="Re-Type New Password   : ">
-									<HBox.margin>
-										<Insets />
-									</HBox.margin>
-								</Label>
-								<PasswordField>
-									<HBox.margin>
-										<Insets left="10.0" />
-									</HBox.margin>
-								</PasswordField>
-							</children>
-						</HBox>
-						<Button mnemonicParsing="false" prefWidth="60.0" text="Submit" />
-					</children>
-				</VBox>
-			</children>
-		</StackPane>
-	</children>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" onAction="#DoViewPatient" text="View Patient">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onAction="#DoAddPrescription" text="Add Prescription">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" onAction="#DoChangePassword" text="Change Password">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" onAction="#DoLogout" text="Logout">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+        </menus>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </MenuBar>
+      <StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox fx:id="DoVbViewPatient" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="View Patient">
+                     <graphic>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Robot Diversity Clinic Management System" />
+                     </graphic>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="84.0" prefWidth="700.0">
+                     <children>
+                        <Label text="Patient ID   :   " />
+                        <TextField />
+                     </children>
+                  </HBox>
+                  <Label prefHeight="50.0" />
+                  <Button maxWidth="60.0" mnemonicParsing="false" text="Submit" />
+                  <TableView prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn prefWidth="70.0" text="C1" />
+                      <TableColumn prefWidth="70.0" text="C2" />
+                        <TableColumn prefWidth="70.0" text="C3" />
+                        <TableColumn prefWidth="70.0" text="C4" />
+                        <TableColumn prefWidth="70.0" text="C5" />
+                        <TableColumn prefWidth="70.0" text="C6" />
+                        <TableColumn prefWidth="70.0" text="C7" />
+                        <TableColumn prefWidth="70.0" text="C8" />
+                        <TableColumn prefWidth="70.0" text="C9" />
+                        <TableColumn prefWidth="70.0" text="C10" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox fx:id="DoVbAddPrescription" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+               <children>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Robot Diversity Clinic Management System" />
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="84.0" text="Patient ID   :" />
+                        <TextField prefWidth="165.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="81.0" text="Name   :" />
+                        <TextField prefWidth="165.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="85.0" text="Disease   :" />
+                        <TextField prefWidth="165.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="83.0" text="Prescription   :" />
+                        <TextArea prefHeight="100.0" prefWidth="165.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextArea>
+                     </children>
+                  </HBox>
+                  <Label />
+                  <Button mnemonicParsing="false" prefWidth="60.0" text="Submit" />
+               </children></VBox>
+            <VBox fx:id="DoVbChangePassword" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="650.0" text="Changed Password">
+                     <graphic>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" prefWidth="650.0" text="Robot Diversity Clinic Management System" />
+                     </graphic>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="150.0" text="Old Password   :">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <PasswordField>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </PasswordField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="150.0" text="New Password   :">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <PasswordField />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="20.0" prefWidth="150.0" text="Re-Type New Password   : ">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <PasswordField>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </PasswordField>
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" prefWidth="60.0" text="Submit" />
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
 </VBox>

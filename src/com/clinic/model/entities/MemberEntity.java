@@ -1,99 +1,97 @@
 package com.clinic.model.entities;
 
+import java.util.Date;
+
 public class MemberEntity {
-	private String memberId;
-	private String memberName;
-	private String memberIdCard;
-	private Role role;
-	private String memberGender;
-	private String dateOfBirth;
-	private String memberAddress;
-	private String memberPhone;
-	private String memberEmail;
-	private String memberPassword;
+	private int id;
+	private String name;
+	private String identityCard;
+	private String role;
+	private String gender;
+	private Date dateOfBirth;
+	private String address;
+	private String phoneNumber;
+	private String email;
+	private String password;
 
-	public enum Role {
-		Admin, Doctor, Receptionist
+	public int getId() {
+		return id;
 	}
 
-	public String getId() {
-		return memberId;
-	}
-
-	public void setId(String id) {
-		this.memberId = id;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getName() {
-		return memberName;
+		return name;
 	}
 
 	public void setName(String name) {
-		this.memberName = name;
+		this.name = name;
 	}
 
 	public String getIdentityCard() {
-		return memberIdCard;
+		return identityCard;
 	}
 
 	public void setIdentityCard(String identityCard) {
-		this.memberIdCard = identityCard;
+		this.identityCard = identityCard;
 	}
 
-	public Role getRole() {
+	public String getRole() {
 		return role;
 	}
 
-	public void setRole(Role role) {
+	public void setRole(String role) {
 		this.role = role;
 	}
 
 	public String getGender() {
-		return memberGender;
+		return gender;
 	}
 
 	public void setGender(String gender) {
-		this.memberGender = gender;
+		this.gender = gender;
 	}
 
-	public String getDateOfBirth() {
+	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(String dateOfBirth) {
+	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
 	public String getAddress() {
-		return memberAddress;
+		return address;
 	}
 
 	public void setAddress(String address) {
-		this.memberAddress = address;
+		this.address = address;
 	}
 
 	public String getPhoneNumber() {
-		return memberPhone;
+		return phoneNumber;
 	}
 
 	public void setPhoneNumber(String phoneNumber) {
-		this.memberPhone = phoneNumber;
+		this.phoneNumber = phoneNumber;
 	}
 
 	public String getEmail() {
-		return memberEmail;
+		return email;
 	}
 
 	public void setEmail(String email) {
-		this.memberEmail = email;
+		this.email = email;
 	}
 
 	public String getPassword() {
-		return memberPassword;
+		return password;
 	}
 
 	public void setPassword(String password) {
-		this.memberPassword = password;
+		this.password = password;
 	}
 
 }
