@@ -8,20 +8,27 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="LoginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="80.0" prefWidth="600.0" text="Login" />
+            <Label alignment="CENTER" prefHeight="80.0" prefWidth="600.0" text="Login" textFill="#27f120">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
          </children>
       </VBox>
       <HBox alignment="CENTER" prefHeight="80.0">
          <children>
-            <Label text="Username   :    ">
+            <Label text="Username   :    " textFill="#27f120">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
             </Label>
             <TextField alignment="CENTER">
                <HBox.margin>
@@ -32,46 +39,65 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
          <children>
-            <Label text="Password   :   ">
+            <Label text="Password   :   " textFill="#27f120">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
             </Label>
             <PasswordField />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
          <children>
-            <RadioButton mnemonicParsing="false" text="Admin   ">
+            <RadioButton mnemonicParsing="false" text="Admin   " textFill="#27f120">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" text="Doctor   ">
+            <RadioButton mnemonicParsing="false" text="Doctor   " textFill="#27f120">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" text="Reception">
+            <RadioButton mnemonicParsing="false" text="Reception" textFill="#27f120">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
             </RadioButton>
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="Login">
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="Login" textFill="#27f120">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="Exit">
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="Exit" textFill="#27f120">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
             </Button>
          </children>
       </HBox>
+      <HBox fx:id="LoginHb" prefHeight="100.0" prefWidth="200.0" />
    </children>
 </VBox>

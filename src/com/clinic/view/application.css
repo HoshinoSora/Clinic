@@ -1,13 +1,17 @@
 #homeLabel{
-	-fx-text:#EECC7D;
-	-fx-font-size:20px;
 	
+	-fx-font-size:25px;	
 }
-
-#homeButton{
-	-fx-text:#7FFF7F;
-	-fx-background-color:#FF6612;
+#homeBtn{
+	-fx-color:#AAFFFF;
+}
+#LoginPane{
+	-fx-background-image:url("images/1.jpg");
+	-fx-background-repeat:stretch;
+	-fx-background-size:500 300;
+	-fx-background-position: center center;
+	-fx-effect:dropshadow(three-pass-box,pink,30,0.5,0,0);
 }
 .root{
-	-fx-background-color:#AA6645;
+	-fx-background-color:#548BB4;
 }
