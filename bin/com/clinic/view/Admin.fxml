@@ -6,6 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
@@ -19,12 +20,18 @@
 	<children>
 		<MenuBar>
 			<menus>
-				<Menu mnemonicParsing="false" onAction="#AdAddMember" text="Add Member" />
-				<Menu mnemonicParsing="false" onAction="#AdViewDoctor" text="View Doctor" />
-				<Menu mnemonicParsing="false" onAction="#AdViewReception" text="View Receptionist" />
-				<Menu mnemonicParsing="false" onAction="#AdViewPatient" text="View Patient" />
-				<Menu mnemonicParsing="false" onAction="#AdChangePassword" text="Change Password" />
-				<Menu mnemonicParsing="false" onAction="#AdLogout" text="Logout" />
+				<Menu mnemonicParsing="false" onAction="#EditMenu" text="Edit">
+               <items>
+                  <MenuItem fx:id="addMember" mnemonicParsing="false" text="Add Member" />
+                  <MenuItem fx:id="changePassword" mnemonicParsing="false" text="Change Password" />
+                  <MenuItem fx:id="logout" mnemonicParsing="false" text="Logout" />
+               </items></Menu>
+				<Menu mnemonicParsing="false" onAction="#ViewMenu" text="View">
+               <items>
+                  <MenuItem fx:id="viewDoctor" mnemonicParsing="false" text="View Doctor" />
+                  <MenuItem fx:id="viewReception" mnemonicParsing="false" text="View Receptionist" />
+                  <MenuItem fx:id="viewPatient" mnemonicParsing="false" text="View Patient" />
+               </items></Menu>
 			</menus>
 			<VBox.margin>
 				<Insets />
