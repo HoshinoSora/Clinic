@@ -2,54 +2,67 @@ package com.clinic.model.entities;
 
 public class PatientEntity {
 	private int patientId;
-	private String name;
-	private String gender;
-	private int age;
-	private String phoneNumber;
-	private String address;
-	private String email;
+	private String patientName;
+	private String patientGender;
+	private int patientAge;
+	private String patientPhone;
+	private String patientAddress;
+	private String patientEmail;
+
 	public int getPatientId() {
 		return patientId;
 	}
+
 	public void setPatientId(int patientId) {
 		this.patientId = patientId;
 	}
+
 	public String getName() {
-		return name;
+		return patientName;
 	}
+
 	public void setName(String name) {
-		this.name = name;
+		this.patientName = name;
 	}
+
 	public String getGender() {
-		return gender;
+		return patientGender;
 	}
+
 	public void setGender(String gender) {
-		this.gender = gender;
+		this.patientGender = gender;
 	}
+
 	public int getAge() {
-		return age;
+		return patientAge;
 	}
+
 	public void setAge(int age) {
-		this.age = age;
+		this.patientAge = age;
 	}
+
 	public String getPhoneNumber() {
-		return phoneNumber;
+		return patientPhone;
 	}
+
 	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+		this.patientPhone = phoneNumber;
 	}
+
 	public String getAddress() {
-		return address;
+		return patientAddress;
 	}
+
 	public void setAddress(String address) {
-		this.address = address;
+		this.patientAddress = address;
 	}
+
 	public String getEmail() {
-		return email;
+		return patientEmail;
 	}
+
 	public void setEmail(String email) {
-		this.email = email;
+		this.patientEmail = email;
 	}
-	
-	
+
 }
