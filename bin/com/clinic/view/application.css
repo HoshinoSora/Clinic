@@ -1,12 +1,6 @@
 #homeLabel{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	-fx-text-fill: #EECC7D;
 	-fx-font-size:20.0px;
-=======
->>>>>>> parent of 7834722... Merge branch 'master' of https://github.com/HoshinoSora/Clinic
-	
 	-fx-font-size:25.0px;	
 }
 #homeBtn{
@@ -17,34 +11,18 @@
 	-fx-background-repeat:stretch;
 	-fx-background-size:500.0 300.0;
 	-fx-background-position: center center;
-<<<<<<< HEAD
-	-fx-effect:dropshadow(three-pass-box,pink,30.0,0.5,0.0,0.0);
 }
 #homeButton{
 	-fx-text-fill: #7FFF7F;
 	-fx-background-color:#FF6612;
-=======
-	-fx-effect:dropshadow(three-pass-box,pink,30,0.5,0,0);
->>>>>>> parent of 7834722... Merge branch 'master' of https://github.com/HoshinoSora/Clinic
-=======
-	-fx-text:#EECC7D;
-	-fx-font-size:20px;
+	-fx-effect:dropshadow(three-pass-box,pink,30.0,0.5,0.0,0.0);
+	-fx-font-size:20.0px;
 	
 }
-=======
-	-fx-text:#EECC7D;
-	-fx-font-size:20px;
 	
-}
->>>>>>> parent of 814ed28... LoginDesign
 
 #homeButton{
-	-fx-text:#7FFF7F;
 	-fx-background-color:#FF6612;
-<<<<<<< HEAD
->>>>>>> parent of 814ed28... LoginDesign
-=======
->>>>>>> parent of 814ed28... LoginDesign
 }
 .root{
 	-fx-background-color:#AA6645;
