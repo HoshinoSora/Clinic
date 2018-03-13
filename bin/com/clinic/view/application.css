@@ -1,5 +1,6 @@
 #homeLabel{
 <<<<<<< HEAD
+<<<<<<< HEAD
 	-fx-text-fill: #EECC7D;
 	-fx-font-size:20.0px;
 =======
@@ -24,7 +25,17 @@
 =======
 	-fx-effect:dropshadow(three-pass-box,pink,30,0.5,0,0);
 >>>>>>> parent of 7834722... Merge branch 'master' of https://github.com/HoshinoSora/Clinic
+=======
+	-fx-text:#EECC7D;
+	-fx-font-size:20px;
+	
+}
+
+#homeButton{
+	-fx-text:#7FFF7F;
+	-fx-background-color:#FF6612;
+>>>>>>> parent of 814ed28... LoginDesign
 }
 .root{
-	-fx-background-color:#548BB4;
+	-fx-background-color:#AA6645;
 }
