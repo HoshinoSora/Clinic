@@ -7,23 +7,23 @@ import javafx.scene.layout.VBox;
 public class AdminController {
 
     @FXML
-    private VBox AdVbAddMember;
+    private VBox adVbAddMember;
 
     @FXML
-    private VBox AdVbViewDoctor;
+    private VBox adVbViewDoctor;
 
     @FXML
-    private VBox AdVbViewReceptionist;
+    private VBox adVbViewReceptionist;
 
     @FXML
-    private VBox AdVbViewPatient;
+    private VBox adVbViewPatient;
 
     @FXML
-    private VBox AdChangePassword;
+    private VBox adChangePassword;
 
     @FXML
-    void AdAddDoctor(ActionEvent event) {
-
+    void AdAddMember(ActionEvent event) {
+    	System.out.println("blah");
     }
 
     @FXML
