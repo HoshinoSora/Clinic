@@ -1,6 +1,21 @@
 package com.clinic.model.entities;
 
 import java.util.Date;
+<<<<<<< HEAD
+=======
+
+public class MemberEntity {
+	private int memberId;
+	private String memberName;
+	private String memberIdCard;
+	private Role role;
+	private String memberGender;
+	private Date dateOfBirth;
+	private String memberAddress;
+	private String memberPhone;
+	private String memberEmail;
+	private String memberPassword;
+>>>>>>> parent of ffc046f... login
 
 public class MemberEntity {
 	private int id;
@@ -15,11 +30,19 @@ public class MemberEntity {
 	private String password;
 
 	public int getId() {
+<<<<<<< HEAD
 		return id;
 	}
 
 	public void setId(int id) {
 		this.id = id;
+=======
+		return memberId;
+	}
+
+	public void setId(int id) {
+		this.memberId = id;
+>>>>>>> parent of ffc046f... login
 	}
 
 	public String getName() {
