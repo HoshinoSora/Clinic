@@ -32,7 +32,7 @@
       </MenuBar>
       <StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
          <children>
-            <VBox fx:id="AdVbAddDoctor" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="AdVbAddDoctor" prefHeight="200.0" prefWidth="100.0" visible="false">
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Add Member">
                      <VBox.margin>
