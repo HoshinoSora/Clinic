@@ -1,6 +1,7 @@
 #homeLabel{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	-fx-text-fill: #EECC7D;
 	-fx-font-size:20.0px;
 =======
@@ -30,10 +31,19 @@
 	-fx-font-size:20px;
 	
 }
+=======
+	-fx-text:#EECC7D;
+	-fx-font-size:20px;
+	
+}
+>>>>>>> parent of 814ed28... LoginDesign
 
 #homeButton{
 	-fx-text:#7FFF7F;
 	-fx-background-color:#FF6612;
+<<<<<<< HEAD
+>>>>>>> parent of 814ed28... LoginDesign
+=======
 >>>>>>> parent of 814ed28... LoginDesign
 }
 .root{
