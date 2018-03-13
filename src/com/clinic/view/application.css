@@ -1,28 +1,22 @@
 #homeLabel{
-<<<<<<< HEAD
-=======
 	-fx-text-fill: #EECC7D;
 	-fx-font-size:20.0px;
->>>>>>> ffc046f038e6839dbfc4f65558d656bb12251014
 	
-	-fx-font-size:25px;	
+	-fx-font-size:25.0px;	
 }
-<<<<<<< HEAD
 #homeBtn{
 	-fx-color:#AAFFFF;
 }
 #LoginPane{
 	-fx-background-image:url("images/1.jpg");
 	-fx-background-repeat:stretch;
-	-fx-background-size:500 300;
+	-fx-background-size:500.0 300.0;
 	-fx-background-position: center center;
-	-fx-effect:dropshadow(three-pass-box,pink,30,0.5,0,0);
-=======
-
+	-fx-effect:dropshadow(three-pass-box,pink,30.0,0.5,0.0,0.0);
+}
 #homeButton{
 	-fx-text-fill: #7FFF7F;
 	-fx-background-color:#FF6612;
->>>>>>> ffc046f038e6839dbfc4f65558d656bb12251014
 }
 .root{
 	-fx-background-color:#548BB4;
