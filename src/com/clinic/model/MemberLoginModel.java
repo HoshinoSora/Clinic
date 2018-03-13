@@ -17,7 +17,7 @@ public class MemberLoginModel {
 		return conn;
 	}
 
-	public MemberEntity find(String loginName, String loginPass) {
+	public MemberEntity loginFind(String loginName, String loginPass) {
 		String sql = "select * from member where name=? and password=?";
 		try {
 			Connection conn = gettingConnection();
@@ -39,7 +39,7 @@ public class MemberLoginModel {
 
 	private MemberEntity getMember(ResultSet rSet) throws SQLException {
 		MemberEntity member = new MemberEntity();
-		member.setId(rSet.getString("memberId"));
+		member.setId(rSet.getInt("memberId"));
 		member.setName(rSet.getString("memberName"));
 		member.setIdentityCard(rSet.getString("idCard"));
 		member.setRole(Role.valueOf(rSet.getString("role")));

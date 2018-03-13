@@ -57,7 +57,7 @@ public class LoginController {
 	void login(ActionEvent event) {
 		try {
 			String str = null;
-			MemberEntity member = memberLogin.find(userName.getText(), password.getText());
+			MemberEntity member = memberLogin.loginFind(userName.getText(), password.getText());
 			if (member.getRole() == Role.Admin) {
 				str = "../view/Admin.fxml";
 			} else if (member.getRole() == Role.Doctor) {
