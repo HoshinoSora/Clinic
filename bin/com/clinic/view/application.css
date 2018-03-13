@@ -11,3 +11,9 @@
 .root{
 	-fx-background-color:#AA6645;
 }
+#AddMemHb{
+	-fx-background-images: url("images/9.jpg");
+	-fx-background-size:180 80;
+	-fx-background-repeat: stretch;
+	-fx-background-position:center center;
+}
