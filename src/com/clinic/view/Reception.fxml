@@ -17,6 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <MenuBar>
@@ -328,6 +329,8 @@
       </StackPane>
    </children>
 =======
+=======
+>>>>>>> parent of ffc046f... login
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
 	minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0"
 	xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">

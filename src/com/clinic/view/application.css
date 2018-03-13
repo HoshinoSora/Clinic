@@ -1,5 +1,6 @@
 #homeLabel{
 <<<<<<< HEAD
+<<<<<<< HEAD
 	-fx-text-fill: #EECC7D;
 	-fx-font-size:20.0px;
 	-fx-font-size:25.0px;	
@@ -22,12 +23,20 @@
 	-fx-text:#EECC7D;
 	-fx-font-size:20px;
 >>>>>>> parent of ffc046f... login
+=======
+	-fx-text:#EECC7D;
+	-fx-font-size:20px;
+>>>>>>> parent of ffc046f... login
 	
 }
 	
 
 #homeButton{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	-fx-text:#7FFF7F;
+>>>>>>> parent of ffc046f... login
 =======
 	-fx-text:#7FFF7F;
 >>>>>>> parent of ffc046f... login

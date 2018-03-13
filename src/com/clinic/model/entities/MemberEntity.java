@@ -2,7 +2,10 @@ package com.clinic.model.entities;
 
 import java.util.Date;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of ffc046f... login
 
 public class MemberEntity {
 	private int memberId;
@@ -17,6 +20,7 @@ public class MemberEntity {
 	private String memberPassword;
 >>>>>>> parent of ffc046f... login
 
+<<<<<<< HEAD
 public class MemberEntity {
 	private int id;
 	private String name;
@@ -37,6 +41,13 @@ public class MemberEntity {
 	public void setId(int id) {
 		this.id = id;
 =======
+=======
+	public enum Role {
+		Admin, Doctor, Receptionist
+	}
+
+	public int getId() {
+>>>>>>> parent of ffc046f... login
 		return memberId;
 	}
 
