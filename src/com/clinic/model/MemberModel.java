@@ -75,7 +75,7 @@ public class MemberModel {
 
 	public MemberEntity findById(String name) {
 
-		String str = "select * from member where memberId=?";
+		String str = "select * from member where memberName=?";
 		try {
 			Connection conn = gettingConnection();
 			PreparedStatement pStatement = conn.prepareStatement(str);
@@ -96,13 +96,13 @@ public class MemberModel {
 		MemberEntity member = new MemberEntity();
 		member.setId(rSet.getInt("memberId"));
 		member.setName(rSet.getString("memberName"));
-		member.setIdentityCard(rSet.getString("idCard"));
+		member.setIdentityCard(rSet.getString("identityCard"));
 		member.setRole(Role.valueOf(rSet.getString("role")));
 		member.setGender(rSet.getString("gender"));
-		member.setDateOfBirth(rSet.getString("dateOfBirth"));
-		member.setAddress(rSet.getString("memberAddress"));
-		member.setPhoneNumber(rSet.getString("memberPhone"));
-		member.setEmail(rSet.getString("memberEmail"));
+		member.setDateOfBirth(rSet.getString("birthday"));
+		member.setAddress(rSet.getString("address"));
+		member.setPhoneNumber(rSet.getString("phoneNumber"));
+		member.setEmail(rSet.getString("email"));
 		member.setPassword(rSet.getString("password"));
 
 		return member;
