@@ -34,7 +34,7 @@ public class MemberModel {
 	}
 
 	public MemberEntity loginFind(String loginName, String loginPass) {
-		String sql = "select * from member where name=? and password=?";
+		String sql = "select * from member where memberName=? and password=?";
 		try {
 			Connection conn = gettingConnection();
 			PreparedStatement pStatement = conn.prepareStatement(sql);
@@ -54,11 +54,19 @@ public class MemberModel {
 	}
 
 	public void create(MemberEntity member) {
-		String str = "insert into .......";
+		String str = "insert into member values (default, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		try {
 			Connection conn = gettingConnection();
 			PreparedStatement pStatement = conn.prepareStatement(str);
 			pStatement.setString(1, member.getName());
+			pStatement.setString(2, member.getIdentityCard());
+			pStatement.setString(3, member.getRole().toString());
+			pStatement.setString(4, member.getGender());
+			pStatement.setString(5, member.getDateOfBirth());
+			pStatement.setString(6, member.getAddress());
+			pStatement.setString(7, member.getPhoneNumber());
+			pStatement.setString(8, member.getEmail());
+			pStatement.setString(9, member.getPassword());
 
 		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
@@ -67,7 +75,7 @@ public class MemberModel {
 
 	public MemberEntity findById(String name) {
 
-		String str = "select ... from ... ... where ...";
+		String str = "select * from member where memberId=?";
 		try {
 			Connection conn = gettingConnection();
 			PreparedStatement pStatement = conn.prepareStatement(str);
