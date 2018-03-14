@@ -181,91 +181,106 @@
 						<Button mnemonicParsing="false" prefWidth="60.0" text="Submit" />
 					</children>
 				</VBox>
-				<VBox fx:id="reViewPrescription" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="reViewPrescription" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
 					<children>
-						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="150.0" prefWidth="650.0" text="Discharge Patient">
+						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="120.0" prefWidth="650.0" text="Discharge Patient">
 							<graphic>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="46.0" prefWidth="650.0" text="Robot Diversity Clinic Management System" />
 							</graphic>
 						</Label>
-						<HBox prefHeight="100.0" prefWidth="200.0">
-							<children>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Patient ID   :" />
-								<TextField>
-									<HBox.margin>
-										<Insets left="10.0" />
-									</HBox.margin>
-								</TextField>
-								<Button mnemonicParsing="false" prefWidth="60.0" text="Search">
-									<HBox.margin>
-										<Insets left="10.0" />
-									</HBox.margin>
-								</Button>
-							</children>
-						</HBox>
-						<HBox prefHeight="100.0" prefWidth="200.0">
-							<children>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Name   :" />
-								<TextField disable="true">
-									<HBox.margin>
-										<Insets left="10.0" />
-									</HBox.margin>
-								</TextField>
-							</children>
-						</HBox>
-						<HBox prefHeight="100.0" prefWidth="200.0">
-							<children>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Date   :" />
-								<DatePicker>
-									<HBox.margin>
-										<Insets left="10.0" />
-									</HBox.margin>
-								</DatePicker>
-							</children>
-						</HBox>
-						<HBox prefHeight="100.0" prefWidth="200.0">
-							<children>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Doctor   :" />
-								<ComboBox prefWidth="150.0">
-									<HBox.margin>
-										<Insets left="10.0" />
-									</HBox.margin>
-								</ComboBox>
-							</children>
-						</HBox>
-						<HBox prefHeight="100.0" prefWidth="200.0">
-							<children>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Disease   :" />
-								<TextField disable="true">
-									<HBox.margin>
-										<Insets left="10.0" />
-									</HBox.margin>
-								</TextField>
-							</children>
-						</HBox>
-						<HBox prefHeight="100.0" prefWidth="200.0">
-							<children>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Prescription   :" />
-								<TextField disable="true">
-									<HBox.margin>
-										<Insets left="10.0" />
-									</HBox.margin>
-								</TextField>
-							</children>
-						</HBox>
-						<HBox prefHeight="100.0" prefWidth="200.0">
-							<children>
-								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Price   :" />
-								<TextField>
-									<HBox.margin>
-										<Insets left="10.0" />
-									</HBox.margin>
-								</TextField>
-							</children>
-						</HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="400.0">
+                           <children>
+            						<HBox prefHeight="100.0" prefWidth="200.0">
+            							<children>
+            								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Patient ID   :" />
+            								<TextField>
+            									<HBox.margin>
+            										<Insets left="10.0" />
+            									</HBox.margin>
+            								</TextField>
+            								<Button mnemonicParsing="false" prefWidth="60.0" text="Search">
+            									<HBox.margin>
+            										<Insets left="10.0" />
+            									</HBox.margin>
+            								</Button>
+            							</children>
+            						</HBox>
+                              <Label />
+            						<HBox prefHeight="100.0" prefWidth="200.0">
+            							<children>
+            								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Name   :" />
+            								<TextField disable="true">
+            									<HBox.margin>
+            										<Insets left="10.0" />
+            									</HBox.margin>
+            								</TextField>
+            							</children>
+            						</HBox>
+                              <Label />
+            						<HBox prefHeight="100.0" prefWidth="200.0">
+            							<children>
+            								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Date   :" />
+            								<DatePicker>
+            									<HBox.margin>
+            										<Insets left="10.0" />
+            									</HBox.margin>
+            								</DatePicker>
+            							</children>
+            						</HBox>
+                              <Label />
+            						<HBox prefHeight="100.0" prefWidth="200.0">
+            							<children>
+            								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Doctor   :" />
+            								<ComboBox prefWidth="150.0">
+            									<HBox.margin>
+            										<Insets left="10.0" />
+            									</HBox.margin>
+            								</ComboBox>
+            							</children>
+            						</HBox>
+                              <Label />
+            						<HBox prefHeight="100.0" prefWidth="200.0">
+            							<children>
+            								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Consulting   :" />
+            								<TextField disable="true">
+            									<HBox.margin>
+            										<Insets left="10.0" />
+            									</HBox.margin>
+            								</TextField>
+            							</children>
+            						</HBox>
+                              <Label />
+            						<HBox prefHeight="100.0" prefWidth="200.0">
+            							<children>
+            								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Medicin   :" />
+            								<TextField disable="true">
+            									<HBox.margin>
+            										<Insets left="10.0" />
+            									</HBox.margin>
+            								</TextField>
+            							</children>
+            						</HBox>
+                              <Label />
+            						<HBox prefHeight="100.0" prefWidth="200.0">
+            							<children>
+            								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Price   :" />
+            								<TextField>
+            									<HBox.margin>
+            										<Insets left="10.0" />
+            									</HBox.margin>
+            								</TextField>
+            							</children>
+            						</HBox>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="dischargeVb" prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
 						<Button mnemonicParsing="false" prefWidth="60.0" text="Submit" />
 						<Label />
-						<TableView prefHeight="200.0" prefWidth="200.0">
+						<TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 							<columns>
 								<TableColumn prefWidth="100.0" text="C1" />
 								<TableColumn prefWidth="100.0" text="C2" />
