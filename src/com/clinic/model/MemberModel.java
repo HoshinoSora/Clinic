@@ -9,7 +9,23 @@ import java.sql.SQLException;
 import com.clinic.model.entities.MemberEntity;
 import com.clinic.model.entities.MemberEntity.Role;
 
-public class MemberLoginModel {
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class MemberModel {
+
+	public void showView(String str) {
+		try {
+			Parent root = FXMLLoader.load(MemberModel.class.getResource(str));
+			Stage stage = new Stage();
+			stage.setScene(new Scene(root));
+			stage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 	private Connection gettingConnection() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");

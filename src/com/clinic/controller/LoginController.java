@@ -1,6 +1,6 @@
 package com.clinic.controller;
 
-import com.clinic.model.MemberLoginModel;
+import com.clinic.model.MemberModel;
 import com.clinic.model.entities.MemberEntity;
 import com.clinic.model.entities.MemberEntity.Role;
 
@@ -39,7 +39,7 @@ public class LoginController {
 	@FXML
 	private RadioButton receptionRole;
 
-	private MemberLoginModel memberLogin;
+	private MemberModel memberModel;
 
 	@FXML
 	void close(ActionEvent event) {
@@ -63,7 +63,7 @@ public class LoginController {
 	void login(ActionEvent event) {
 		try {
 			String str = null;
-			MemberEntity member = memberLogin.loginFind(userName.getText(), password.getText());
+			MemberEntity member = memberModel.loginFind(userName.getText(), password.getText());
 			if (member.getRole() == Role.Admin) {
 				str = "../view/Admin.fxml";
 			} else if (member.getRole() == Role.Doctor) {
@@ -71,7 +71,7 @@ public class LoginController {
 			} else {
 				str = "../view/Reception.fxml";
 			}
-			MemberController.showView(str);
+			memberModel.showView(str);
 			login.getScene().getWindow().hide();
 		} catch (Exception e) {
 			e.printStackTrace();
