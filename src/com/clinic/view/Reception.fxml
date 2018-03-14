@@ -7,6 +7,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
@@ -16,15 +17,21 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinic.controller.MemberController">
+<VBox fx:id="reception" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinic.controller.ReceptionController">
 	<children>
 		<MenuBar>
 			<menus>
-				<Menu mnemonicParsing="false" onAction="#ReAddPatient" text="Add Patient" />
-				<Menu mnemonicParsing="false" onAction="#ReAddToken" text="Create Token" />
-				<Menu mnemonicParsing="false" onAction="#ReViewPrescription" text="Discharge Patient" />
-				<Menu mnemonicParsing="false" onAction="#ReChangePassword" text="Change Password" />
-				<Menu mnemonicParsing="false" onAction="#ReLogout" text="Logout" />
+				<Menu mnemonicParsing="false" onAction="#PatientMenu" text="Patient">
+               <items>
+                  <MenuItem fx:id="addPatient" mnemonicParsing="false" text="Add Patient" />
+                  <MenuItem fx:id="createToken" mnemonicParsing="false" text="Create Token" />
+                  <MenuItem fx:id="dischargePatient" mnemonicParsing="false" text="Discharge Patient" />
+               </items></Menu>
+				<Menu mnemonicParsing="false" onAction="#EditMenu" text="Edit">
+               <items>
+                  <MenuItem fx:id="changePassword" mnemonicParsing="false" text="Change Password" />
+                  <MenuItem fx:id="logout" mnemonicParsing="false" text="Logout" />
+               </items></Menu>
 			</menus>
 			<VBox.margin>
 				<Insets />
@@ -32,7 +39,7 @@
 		</MenuBar>
 		<StackPane prefHeight="575.0" prefWidth="700.0">
 			<children>
-				<VBox fx:id="ReVbAddPatient" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="reVbAddPatient" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Add Patient">
 							<graphic>
@@ -119,7 +126,7 @@
 						<Label prefHeight="200.0" />
 					</children>
 				</VBox>
-				<VBox fx:id="ReCreateToken" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="reCreateToken" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Create Token">
 							<graphic>
@@ -174,7 +181,7 @@
 						<Button mnemonicParsing="false" prefWidth="60.0" text="Submit" />
 					</children>
 				</VBox>
-				<VBox fx:id="ReViewPrescription" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="reViewPrescription" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="150.0" prefWidth="650.0" text="Discharge Patient">
 							<graphic>
@@ -271,7 +278,7 @@
 						</TableView>
 					</children>
 				</VBox>
-				<VBox fx:id="ReChangePassword" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+				<VBox fx:id="reChangePassword" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="650.0" text="Changed Password">
 							<graphic>
