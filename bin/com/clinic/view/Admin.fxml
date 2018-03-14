@@ -184,12 +184,12 @@
 						<HBox alignment="CENTER" prefHeight="84.0" prefWidth="700.0">
 							<children>
 								<Label text="Doctor Name   :   " />
-								<TextField />
+								<TextField fx:id="doctorName" />
 							</children>
 						</HBox>
-						<Button maxWidth="60.0" mnemonicParsing="false" text="Search" />
+						<Button maxWidth="60.0" mnemonicParsing="false" onAction="#findDoctor" text="Search" />
 						<Label prefHeight="50.0" />
-						<TableView prefHeight="200.0" prefWidth="200.0">
+						<TableView fx:id="doctorTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 							<columns>
 								<TableColumn prefWidth="70.0" text="C1" />
 								<TableColumn prefWidth="70.0" text="C2" />
@@ -215,12 +215,12 @@
 						<HBox alignment="CENTER" prefHeight="84.0" prefWidth="700.0">
 							<children>
 								<Label text="Receptionist Name   :   " />
-								<TextField />
+								<TextField fx:id="receptionistName" />
 							</children>
 						</HBox>
-						<Button maxWidth="60.0" mnemonicParsing="false" text="Search" />
+						<Button maxWidth="60.0" mnemonicParsing="false" onAction="#findReceptionist" text="Search" />
 						<Label prefHeight="50.0" />
-						<TableView prefHeight="200.0" prefWidth="200.0">
+						<TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 							<columns>
 								<TableColumn prefWidth="70.0" text="C1" />
 								<TableColumn prefWidth="70.0" text="C2" />
@@ -246,12 +246,12 @@
 						<HBox alignment="CENTER" prefHeight="84.0" prefWidth="700.0">
 							<children>
 								<Label text="Patient Name   :   " />
-								<TextField />
+								<TextField fx:id="patientName" />
 							</children>
 						</HBox>
-						<Button maxWidth="60.0" mnemonicParsing="false" text="Search" />
+						<Button maxWidth="60.0" mnemonicParsing="false" onAction="#findPatient" text="Search" />
 						<Label prefHeight="50.0" />
-						<TableView prefHeight="200.0" prefWidth="200.0">
+						<TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 							<columns>
 								<TableColumn prefWidth="70.0" text="C1" />
 								<TableColumn prefWidth="70.0" text="C2" />
@@ -316,7 +316,7 @@
 								</PasswordField>
 							</children>
 						</HBox>
-						<Button mnemonicParsing="false" prefWidth="60.0" text="Submit" />
+						<Button mnemonicParsing="false" onAction="#updatePassword" prefWidth="60.0" text="Submit" />
 					</children>
 				</VBox>
 			</children>
