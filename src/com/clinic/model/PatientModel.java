@@ -8,25 +8,9 @@ import java.sql.SQLException;
 
 import com.clinic.model.entities.PatientEntity;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
 public class PatientModel {
 
-	public void showView(String str) {
-		try {
-			Parent root = FXMLLoader.load(PatientModel.class.getResource(str));
-			Stage stage = new Stage();
-			stage.setScene(new Scene(root));
-			stage.show();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	private Connection gettingConnection() throws ClassNotFoundException, SQLException {
+		private Connection gettingConnection() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/clinicDB?user=root&password=admin");
 		return conn;
