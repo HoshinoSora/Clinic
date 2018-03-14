@@ -29,7 +29,7 @@ public class MemberModel {
 
 	private Connection gettingConnection() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/clinicDB?user=root&password=admin");
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/clinicdb?user=root&password=admin");
 		return conn;
 	}
 

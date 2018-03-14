@@ -1,5 +1,7 @@
 package com.clinic.controller;
 
+import com.clinic.model.entities.MemberEntity;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -40,7 +42,7 @@ public class AdminController {
 	private VBox adVbAddDoctor;
 
 	@FXML
-	private TableView<?> memberTable;
+	private TableView<MemberEntity> memberTable;
 
 	@FXML
 	private VBox adVbViewDoctor;
@@ -49,7 +51,7 @@ public class AdminController {
 	private TextField doctorName;
 
 	@FXML
-	private TableView<?> doctorTable;
+	private TableView<MemberEntity> doctorTable;
 
 	@FXML
 	private VBox adVbViewReceptionist;
@@ -64,7 +66,7 @@ public class AdminController {
 	private TextField patientName;
 
 	@FXML
-	private TableView<?> patientTable;
+	private TableView<MemberEntity> patientTable;
 
 	@FXML
 	private VBox adChangePassword;
