@@ -6,7 +6,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -34,10 +37,43 @@ public class ReceptionController {
 	private VBox reVbAddPatient;
 
 	@FXML
+	private TextField patientId;
+
+	@FXML
+	private TextField patientName;
+
+	@FXML
+	private RadioButton genderMale;
+
+	@FXML
+	private RadioButton genderFemale;
+
+	@FXML
+	private TextField patientAge;
+
+	@FXML
+	private TextField patientPhone;
+
+	@FXML
+	private TextField patientAddress;
+
+	@FXML
+	private TextField patientEmail;
+
+	@FXML
 	private VBox reCreateToken;
 
 	@FXML
+	private TextField tokenId;
+
+	@FXML
+	private ComboBox<?> doctor;
+
+	@FXML
 	private VBox reViewPrescription;
+
+	@FXML
+	private VBox dischargeVb;
 
 	@FXML
 	private VBox reChangePassword;
@@ -54,7 +90,7 @@ public class ReceptionController {
 				reViewPrescription.visibleProperty().setValue(false);
 			}
 		});
-		
+
 		logout.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -84,7 +120,7 @@ public class ReceptionController {
 				reViewPrescription.visibleProperty().setValue(false);
 			}
 		});
-		
+
 		createToken.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -95,7 +131,7 @@ public class ReceptionController {
 				reViewPrescription.visibleProperty().setValue(false);
 			}
 		});
-		
+
 		dischargePatient.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -108,4 +144,13 @@ public class ReceptionController {
 		});
 	}
 
+	@FXML
+	void createToken(ActionEvent event) {
+
+	}
+
+	@FXML
+	void findPatient(ActionEvent event) {
+
+	}
 }
