@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinic.controller.MemberController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinic.controller.AdminController">
 	<children>
 		<MenuBar>
 			<menus>
@@ -32,7 +32,7 @@
 		</MenuBar>
 		<StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 			<children>
-				<VBox fx:id="AdVbAddDoctor" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="adVbAddDoctor" prefHeight="200.0" prefWidth="100.0">
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Add Member">
 							<VBox.margin>
@@ -153,7 +153,7 @@
 						</TableView>
 					</children>
 				</VBox>
-				<VBox fx:id="AdVbViewDoctor" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="adVbViewDoctor" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="View Doctor">
 							<graphic>
@@ -184,7 +184,7 @@
 						</TableView>
 					</children>
 				</VBox>
-				<VBox fx:id="AdVbViewReceptionist" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="adVbViewReceptionist" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="View Receptionist">
 							<graphic>
@@ -215,7 +215,7 @@
 						</TableView>
 					</children>
 				</VBox>
-				<VBox fx:id="AdVbViewPatient" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="adVbViewPatient" alignment="TOP_CENTER" disable="true" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="View Patient">
 							<graphic>
@@ -246,7 +246,7 @@
 						</TableView>
 					</children>
 				</VBox>
-				<VBox fx:id="AdChangePassword" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="adChangePassword" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="650.0" text="Changed Password">
 							<graphic>

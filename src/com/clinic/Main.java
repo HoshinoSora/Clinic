@@ -10,11 +10,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-<<<<<<< HEAD
 			Parent root = FXMLLoader.load(getClass().getResource("view/ClinicHome.fxml"));
-=======
-			Parent root = FXMLLoader.load(getClass().getResource("view/Admin.fxml"));
->>>>>>> fb7947a4c1362011b1f0b5b7870dc31ed48dab0e
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("view/application.css").toExternalForm());
 			primaryStage.setScene(scene);
