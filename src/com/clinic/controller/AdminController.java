@@ -7,6 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -40,10 +42,22 @@ public class AdminController {
 	private VBox adVbViewDoctor;
 
 	@FXML
+	private TextField doctorName;
+
+	@FXML
+	private TableView<?> doctorTable;
+
+	@FXML
 	private VBox adVbViewReceptionist;
 
 	@FXML
+	private TextField receptionistName;
+
+	@FXML
 	private VBox adVbViewPatient;
+
+	@FXML
+	private TextField patientName;
 
 	@FXML
 	private VBox adChangePassword;
@@ -128,5 +142,25 @@ public class AdminController {
 				adChangePassword.visibleProperty().set(false);
 			}
 		});
+	}
+
+	@FXML
+	void findDoctor(ActionEvent event) {
+
+	}
+
+	@FXML
+	void findPatient(ActionEvent event) {
+
+	}
+
+	@FXML
+	void findReceptionist(ActionEvent event) {
+
+	}
+
+	@FXML
+	void updatePassword(ActionEvent event) {
+
 	}
 }

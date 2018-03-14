@@ -1,19 +1,36 @@
 #homeLabel{
-	-fx-text-fill: #EECC7D;
-	-fx-font-size:20.0px;
-	
+	-fx-text-fill: #0000FF;
+	-fx-font-size:25.0px;	
 }
-
-#homeButton{
-	-fx-text-fill: #7FFF7F;
-	-fx-background-color:#FF6612;
+#btn{
+	-fx-font-size:16px;	
+	-fx-text-fill: #FFFFFF;
+	-fx-background-color:#63B4FB;
 }
-.root{
-	-fx-background-color:#AA6645;
+#home{
+	-fx-background-image: url("images/home.jpg");
+	-fx-background-repeat: stretch;
+	-fx-background-size:600 300;
+	-fx-background-position:center center;
+	-fx-effect: dropshadow(three-pass-box,pink,30,0.5,0,0);
 }
-#AddMemHb{
-	-fx-background-images: url("images/9.jpg");
-	-fx-background-size:180 80;
+#loginLabel1{
+	-fx-text-fill: #9A42A7;
+	-fx-font-size:25px;
+}
+#loginlabel2{
+	-fx-text-fill: #55FFFF;
+	-fx-font-size:20px;
+}
+#login{
+	-fx-background-image:url("images/login.png");
+	-fx-background-repeat: stretch;
+	-fx-background-size:600 400;
+	-fx-background-position:center center;
+}
+#dischargeVb{
+	-fx-background-image:url("images/9.jpg");
 	-fx-background-repeat: stretch;
 	-fx-background-position:center center;
+	
 }
