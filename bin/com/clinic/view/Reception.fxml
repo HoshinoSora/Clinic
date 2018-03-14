@@ -49,7 +49,7 @@
 						<HBox prefHeight="100.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Patient ID   :" />
-								<TextField>
+								<TextField fx:id="patientId">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -59,7 +59,7 @@
 						<HBox prefHeight="100.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="100.0" text="Name   :" />
-								<TextField>
+								<TextField fx:id="patientName">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -69,12 +69,12 @@
 						<HBox prefHeight="100.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="100.0" text="Gender   :" />
-								<RadioButton mnemonicParsing="false" text="Male">
+								<RadioButton fx:id="genderMale" mnemonicParsing="false" text="Male">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
 								</RadioButton>
-								<RadioButton mnemonicParsing="false" text="Female">
+								<RadioButton fx:id="genderFemale" mnemonicParsing="false" text="Female">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -84,7 +84,7 @@
 						<HBox prefHeight="100.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="100.0" text="Age   :" />
-								<TextField>
+								<TextField fx:id="patientAge">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -94,7 +94,7 @@
 						<HBox prefHeight="100.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefWidth="100.0" text="Mobile   :" />
-								<TextField>
+								<TextField fx:id="patientPhone">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -104,7 +104,7 @@
 						<HBox prefHeight="100.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="100.0" text="Address   :" />
-								<TextField>
+								<TextField fx:id="patientAddress">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -114,7 +114,7 @@
 						<HBox prefHeight="100.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="100.0" text="Email   :" />
-								<TextField>
+								<TextField fx:id="patientEmail">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -126,7 +126,7 @@
 						<Label prefHeight="200.0" />
 					</children>
 				</VBox>
-				<VBox fx:id="reCreateToken" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="reCreateToken" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Create Token">
 							<graphic>
@@ -136,7 +136,7 @@
 						<HBox prefHeight="70.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Token ID   :" />
-								<TextField>
+								<TextField fx:id="tokenId">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -146,12 +146,12 @@
 						<HBox prefHeight="70.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Patient ID   :" />
-								<TextField>
+								<TextField fx:id="patientId">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
 								</TextField>
-								<Button mnemonicParsing="false" prefWidth="60.0" text="Search">
+								<Button mnemonicParsing="false" onAction="#findPatient" prefWidth="60.0" text="Search">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -161,7 +161,7 @@
 						<HBox prefHeight="70.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Name   :" />
-								<TextField disable="true">
+								<TextField fx:id="patientName" disable="true">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -171,14 +171,14 @@
 						<HBox prefHeight="70.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="100.0" text="Doctor   :" />
-								<ComboBox prefWidth="150.0">
+								<ComboBox fx:id="doctor" prefWidth="150.0">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
 								</ComboBox>
 							</children>
 						</HBox>
-						<Button mnemonicParsing="false" prefWidth="60.0" text="Submit" />
+						<Button mnemonicParsing="false" onAction="#createToken" prefWidth="60.0" text="Submit" />
 					</children>
 				</VBox>
 				<VBox fx:id="reViewPrescription" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
