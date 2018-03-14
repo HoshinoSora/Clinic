@@ -65,7 +65,7 @@ public class MemberModel {
 		}
 	}
 
-	public MemberEntity findByName(String name) {
+	public MemberEntity findById(String name) {
 
 		String str = "select ... from ... ... where ...";
 		try {
