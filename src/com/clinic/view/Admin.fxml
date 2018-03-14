@@ -16,11 +16,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<<<<<<< HEAD
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinic.controller.AdminController">
-=======
 <VBox fx:id="admin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinic.controller.AdminController">
->>>>>>> 477498758aeb70b360332eadd67fdc87582d5460
 	<children>
 		<MenuBar>
 			<menus>
@@ -43,11 +39,7 @@
 		</MenuBar>
 		<StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 			<children>
-<<<<<<< HEAD
-				<VBox fx:id="adVbAddDoctor" prefHeight="200.0" prefWidth="100.0">
-=======
 				<VBox fx:id="adVbAddDoctor" prefHeight="200.0" prefWidth="100.0" visible="false">
->>>>>>> 477498758aeb70b360332eadd67fdc87582d5460
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Add Member">
 							<VBox.margin>
@@ -244,11 +236,7 @@
 						</TableView>
 					</children>
 				</VBox>
-<<<<<<< HEAD
-				<VBox fx:id="adVbViewPatient" alignment="TOP_CENTER" disable="true" prefHeight="200.0" prefWidth="100.0" visible="false">
-=======
 				<VBox fx:id="adVbViewPatient" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
->>>>>>> 477498758aeb70b360332eadd67fdc87582d5460
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="View Patient">
 							<graphic>
