@@ -7,6 +7,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -31,14 +35,38 @@ public class DoctorController {
 	private VBox doVbViewPatient;
 
 	@FXML
+	private TextField patientId;
+
+	@FXML
+	private TableView<?> patientTable;
+
+	@FXML
 	private VBox doVbAddPrescription;
+
+	@FXML
+	private TextField patientName;
+
+	@FXML
+	private TextField patientDisease;
+
+	@FXML
+	private TextArea patientPrescription;
 
 	@FXML
 	private VBox doVbChangePassword;
 
 	@FXML
+	private PasswordField oldPassword;
+
+	@FXML
+	private PasswordField newPassword;
+
+	@FXML
+	private PasswordField confirmPassword;
+
+	@FXML
 	void EditMenu(ActionEvent event) {
-		
+
 		changePassword.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -48,7 +76,7 @@ public class DoctorController {
 				doVbAddPrescription.visibleProperty().setValue(false);
 			}
 		});
-		
+
 		logout.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -77,7 +105,7 @@ public class DoctorController {
 				doVbAddPrescription.visibleProperty().setValue(false);
 			}
 		});
-		
+
 		addPrescription.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -89,4 +117,18 @@ public class DoctorController {
 		});
 	}
 
+	@FXML
+	void findPatient(ActionEvent event) {
+
+	}
+
+	@FXML
+	void updatePassword(ActionEvent event) {
+
+	}
+
+	@FXML
+	void updatePatient(ActionEvent event) {
+
+	}
 }

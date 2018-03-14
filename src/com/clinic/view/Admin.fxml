@@ -39,7 +39,7 @@
 		</MenuBar>
 		<StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 			<children>
-				<VBox fx:id="adVbAddDoctor" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="adVbAddDoctor" prefHeight="200.0" prefWidth="100.0">
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Add Member">
 							<VBox.margin>
@@ -158,7 +158,7 @@
                         </HBox>
 							</children>
 						</VBox>
-						<TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+						<TableView fx:id="memberTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 							<columns>
 								<TableColumn prefWidth="70.0" text="C1" />
 								<TableColumn prefWidth="70.0" text="C2" />
@@ -251,7 +251,7 @@
 						</HBox>
 						<Button maxWidth="60.0" mnemonicParsing="false" onAction="#findPatient" text="Search" />
 						<Label prefHeight="50.0" />
-						<TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+						<TableView fx:id="patientTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 							<columns>
 								<TableColumn prefWidth="70.0" text="C1" />
 								<TableColumn prefWidth="70.0" text="C2" />
@@ -281,7 +281,7 @@
 										<Insets />
 									</HBox.margin>
 								</Label>
-								<PasswordField>
+								<PasswordField fx:id="oldPassword">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -295,7 +295,7 @@
 										<Insets />
 									</HBox.margin>
 								</Label>
-								<PasswordField>
+								<PasswordField fx:id="newPassword">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -309,7 +309,7 @@
 										<Insets />
 									</HBox.margin>
 								</Label>
-								<PasswordField>
+								<PasswordField fx:id="confirmPassword">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
