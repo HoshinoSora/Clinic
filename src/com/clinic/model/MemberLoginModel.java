@@ -17,7 +17,7 @@ public class MemberLoginModel {
 		return conn;
 	}
 
-	public MemberEntity find(String loginName, String loginPass) {
+	public MemberEntity loginFind(String loginName, String loginPass) {
 		String sql = "select * from member where name=? and password=?";
 		try {
 			Connection conn = gettingConnection();
@@ -30,16 +30,47 @@ public class MemberLoginModel {
 				return getMember(rSet);
 			}
 
-		} catch (Exception e) {
+		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 
 		return null;
 	}
 
+	public void create(MemberEntity member) {
+		String str = "insert into .......";
+		try {
+			Connection conn = gettingConnection();
+			PreparedStatement pStatement = conn.prepareStatement(str);
+			pStatement.setString(1, member.getName());
+
+		} catch (SQLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public MemberEntity findByName(String name) {
+
+		String str = "select ... from ... ... where ...";
+		try {
+			Connection conn = gettingConnection();
+			PreparedStatement pStatement = conn.prepareStatement(str);
+			pStatement.setString(1, name);
+			ResultSet rSet = pStatement.executeQuery();
+
+			while (rSet.next()) {
+				return getMember(rSet);
+			}
+
+		} catch (SQLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 	private MemberEntity getMember(ResultSet rSet) throws SQLException {
 		MemberEntity member = new MemberEntity();
-		member.setId(rSet.getString("memberId"));
+		member.setId(rSet.getInt("memberId"));
 		member.setName(rSet.getString("memberName"));
 		member.setIdentityCard(rSet.getString("idCard"));
 		member.setRole(Role.valueOf(rSet.getString("role")));
