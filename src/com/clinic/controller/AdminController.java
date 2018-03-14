@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
@@ -39,6 +40,9 @@ public class AdminController {
 	private VBox adVbAddDoctor;
 
 	@FXML
+	private TableView<?> memberTable;
+
+	@FXML
 	private VBox adVbViewDoctor;
 
 	@FXML
@@ -60,7 +64,19 @@ public class AdminController {
 	private TextField patientName;
 
 	@FXML
+	private TableView<?> patientTable;
+
+	@FXML
 	private VBox adChangePassword;
+
+	@FXML
+	private PasswordField oldPassword;
+
+	@FXML
+	private PasswordField newPassword;
+
+	@FXML
+	private PasswordField confirmPassword;
 
 	@FXML
 	void EditMenu() {

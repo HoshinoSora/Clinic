@@ -48,12 +48,12 @@
 						<HBox alignment="CENTER" prefHeight="84.0" prefWidth="700.0">
 							<children>
 								<Label text="Patient ID   :   " />
-								<TextField />
+								<TextField fx:id="patientId" />
 							</children>
 						</HBox>
 						<Label prefHeight="50.0" />
-						<Button maxWidth="60.0" mnemonicParsing="false" text="Submit" />
-						<TableView prefHeight="200.0" prefWidth="200.0">
+						<Button maxWidth="60.0" mnemonicParsing="false" onAction="#findPatient" text="Submit" />
+						<TableView fx:id="patientTable" prefHeight="200.0" prefWidth="200.0">
 							<columns>
 								<TableColumn prefWidth="70.0" text="C1" />
 								<TableColumn prefWidth="70.0" text="C2" />
@@ -75,7 +75,7 @@
 						<HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="84.0" text="Patient ID   :" />
-								<TextField prefWidth="165.0">
+								<TextField fx:id="patientId" prefWidth="165.0">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -85,7 +85,7 @@
 						<HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="81.0" text="Name   :" />
-								<TextField prefWidth="165.0">
+								<TextField fx:id="patientName" disable="true" prefWidth="165.0">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -95,7 +95,7 @@
 						<HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="85.0" text="Disease   :" />
-								<TextField prefWidth="165.0">
+								<TextField fx:id="patientDisease" prefWidth="165.0">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -105,7 +105,7 @@
 						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
 							<children>
 								<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="83.0" text="Prescription   :" />
-								<TextArea prefHeight="100.0" prefWidth="165.0">
+								<TextArea fx:id="patientPrescription" prefHeight="100.0" prefWidth="165.0">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -113,7 +113,7 @@
 							</children>
 						</HBox>
 						<Label />
-						<Button mnemonicParsing="false" prefWidth="60.0" text="Submit" />
+						<Button mnemonicParsing="false" onAction="#updatePatient" prefWidth="60.0" text="Submit" />
 					</children>
 				</VBox>
 				<VBox fx:id="doVbChangePassword" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
@@ -130,7 +130,7 @@
 										<Insets />
 									</HBox.margin>
 								</Label>
-								<PasswordField>
+								<PasswordField fx:id="oldPassword">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -144,7 +144,7 @@
 										<Insets />
 									</HBox.margin>
 								</Label>
-								<PasswordField />
+								<PasswordField fx:id="newPassword" />
 							</children>
 							<VBox.margin>
 								<Insets left="10.0" />
@@ -157,14 +157,14 @@
 										<Insets />
 									</HBox.margin>
 								</Label>
-								<PasswordField>
+								<PasswordField fx:id="confirmPassword">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
 								</PasswordField>
 							</children>
 						</HBox>
-						<Button mnemonicParsing="false" prefWidth="60.0" text="Submit" />
+						<Button mnemonicParsing="false" onAction="#updatePassword" prefWidth="60.0" text="Submit" />
 					</children>
 				</VBox>
 			</children>

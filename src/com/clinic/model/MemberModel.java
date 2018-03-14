@@ -73,7 +73,7 @@ public class MemberModel {
 		}
 	}
 
-	public MemberEntity findById(String name) {
+	public MemberEntity findByName(String name) {
 
 		String str = "select * from member where memberName=?";
 		try {
