@@ -31,10 +31,12 @@ public class MemberModel {
 	private Connection gettingConnection() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/clinicdb?user=root&password=admin");
+		System.out.println("connection success");
 		return conn;
 	}
 
 	public MemberEntity loginFind(String loginName, String loginPass) {
+		System.out.println("blah");
 		String sql = "select * from member where memberName=? and password=?";
 		try {
 			Connection conn = gettingConnection();
@@ -42,7 +44,9 @@ public class MemberModel {
 			pStatement.setString(1, loginName);
 			pStatement.setString(2, loginPass);
 			ResultSet rSet = pStatement.executeQuery();
-
+			
+			System.out.println("loginFind invoked");
+			
 			while (rSet.next()) {
 				return getMember(rSet);
 			}
@@ -68,7 +72,8 @@ public class MemberModel {
 			pStatement.setString(7, member.getPhoneNumber());
 			pStatement.setString(8, member.getEmail());
 			pStatement.setString(9, member.getPassword());
-
+			
+			System.out.println("database successful");
 		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -105,7 +110,7 @@ public class MemberModel {
 		member.setPhoneNumber(rSet.getString("phoneNumber"));
 		member.setEmail(rSet.getString("email"));
 		member.setPassword(rSet.getString("password"));
-
+		System.out.println("getMember invoked");
 		return member;
 	}
 
