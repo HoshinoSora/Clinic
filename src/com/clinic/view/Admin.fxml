@@ -54,10 +54,14 @@
 		<StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 			<children>
 <<<<<<< HEAD
+				<VBox fx:id="adVbAddDoctor" prefHeight="200.0" prefWidth="100.0" visible="false">
+=======
+<<<<<<< HEAD
 				<VBox fx:id="adVbAddDoctor" prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css" visible="false">
 =======
 				<VBox fx:id="adVbAddDoctor" prefHeight="200.0" prefWidth="100.0">
 >>>>>>> 59cba8b740299cd15c1c41634b1bbc8d27d8ddb6
+>>>>>>> 2ddd04d2b4e47d55d01d0aad3cae85930885e9e5
 					<children>
 						<Label fx:id="addMemLab" alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="80.0" prefWidth="700.0" stylesheets="@application.css" text="Add Member" textFill="#4028f7">
 							<VBox.margin>
