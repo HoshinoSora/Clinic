@@ -9,6 +9,24 @@ public class RecordEntity {
 	private String disease;
 	private String prescription;
 	private Date date;
+	private String consultingFees;
+	private String medicineFees;
+
+	public String getConsultingFees() {
+		return consultingFees;
+	}
+
+	public void setConsultingFees(String consultingFees) {
+		this.consultingFees = consultingFees;
+	}
+
+	public String getMedicineFees() {
+		return medicineFees;
+	}
+
+	public void setMedicineFees(String medicineFees) {
+		this.medicineFees = medicineFees;
+	}
 
 	public int getRecordId() {
 		return recordId;

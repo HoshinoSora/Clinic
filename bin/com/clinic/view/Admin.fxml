@@ -39,7 +39,7 @@
 		</MenuBar>
 		<StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 			<children>
-				<VBox fx:id="adVbAddDoctor" prefHeight="200.0" prefWidth="100.0" visible="false">
+				<VBox fx:id="adVbAddDoctor" prefHeight="200.0" prefWidth="100.0">
 					<children>
 						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Add Member">
 							<VBox.margin>
@@ -58,41 +58,33 @@
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
             										<Label prefWidth="100.0" text="       Member ID     " />
-            										<TextField />
+            										<TextField fx:id="memberId" />
             									</children>
             								</HBox>
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
             										<Label prefWidth="100.0" text="       Name     " />
-            										<TextField />
+            										<TextField fx:id="memberName" />
             									</children>
             								</HBox>
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
             										<Label prefWidth="100.0" text="       Identity Card" />
-            										<TextField />
+            										<TextField fx:id="idendityCard" />
             									</children>
             								</HBox>
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
             										<Label prefWidth="100.0" text="       Date Of Birth" />
-            										<DatePicker />
+            										<DatePicker fx:id="dateOfBirth" />
             									</children>
             								</HBox>
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
             										<Label prefWidth="100.0" text="       Position" />
-            										<RadioButton mnemonicParsing="false" text="Doctor" />
-            										<RadioButton mnemonicParsing="false" text="Receptionist">
-            											<HBox.margin>
-            												<Insets left="10.0" />
-            											</HBox.margin>
-            										</RadioButton>
-            										<RadioButton mnemonicParsing="false" text="Admin">
-            											<HBox.margin>
-            												<Insets left="10.0" />
-            											</HBox.margin>
-            										</RadioButton>
+            										<RadioButton fx:id="doctorRbt" mnemonicParsing="false" text="Doctor" />
+            										<RadioButton fx:id="receptionistRbt" mnemonicParsing="false" text="Receptionist" />
+            										<RadioButton fx:id="adminRbt" mnemonicParsing="false" text="Admin" />
             									</children>
             								</HBox>
                                  </children>
@@ -102,7 +94,7 @@
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
             										<Label prefWidth="100.0" text="       Address" />
-            										<TextField>
+            										<TextField fx:id="memberAddress">
             											<HBox.margin>
             												<Insets right="50.0" />
             											</HBox.margin>
@@ -112,7 +104,7 @@
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
             										<Label prefWidth="100.0" text="       Phone No" />
-            										<TextField>
+            										<TextField fx:id="memberPhone">
             											<HBox.margin>
             												<Insets right="50.0" />
             											</HBox.margin>
@@ -122,7 +114,7 @@
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
             										<Label prefWidth="100.0" text="       Email Address" />
-            										<TextField>
+            										<TextField fx:id="memberEmail">
             											<HBox.margin>
             												<Insets right="50.0" />
             											</HBox.margin>
@@ -132,18 +124,14 @@
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
             										<Label prefWidth="100.0" text="       Password" />
-            										<PasswordField />
+            										<PasswordField fx:id="memberPassword" />
             									</children>
             								</HBox>
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
             										<Label prefWidth="100.0" text="       Gender" />
-            										<RadioButton mnemonicParsing="false" prefWidth="70.0" text="Male" />
-            										<RadioButton mnemonicParsing="false" text="Female">
-            											<HBox.margin>
-            												<Insets right="70.0" />
-            											</HBox.margin>
-            										</RadioButton>
+            										<RadioButton fx:id="memberMale" mnemonicParsing="false" prefWidth="70.0" text="Male" />
+            										<RadioButton fx:id="memberFemale" mnemonicParsing="false" text="Female" />
             									</children>
             								</HBox>
                                  </children>
@@ -152,13 +140,13 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <Button mnemonicParsing="false" prefWidth="60.0" text="INSERT" />
-                              <Button mnemonicParsing="false" prefWidth="60.0" text="CLEAR" />
+                              <Button mnemonicParsing="false" onAction="#createMember" prefWidth="60.0" text="INSERT" />
+                              <Button mnemonicParsing="false" onAction="#clear" prefWidth="60.0" text="CLEAR" />
                            </children>
                         </HBox>
 							</children>
 						</VBox>
-						<TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+						<TableView fx:id="memberTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 							<columns>
 								<TableColumn prefWidth="70.0" text="C1" />
 								<TableColumn prefWidth="70.0" text="C2" />
@@ -251,7 +239,7 @@
 						</HBox>
 						<Button maxWidth="60.0" mnemonicParsing="false" onAction="#findPatient" text="Search" />
 						<Label prefHeight="50.0" />
-						<TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+						<TableView fx:id="patientTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 							<columns>
 								<TableColumn prefWidth="70.0" text="C1" />
 								<TableColumn prefWidth="70.0" text="C2" />
@@ -281,7 +269,7 @@
 										<Insets />
 									</HBox.margin>
 								</Label>
-								<PasswordField>
+								<PasswordField fx:id="oldPassword">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -295,7 +283,7 @@
 										<Insets />
 									</HBox.margin>
 								</Label>
-								<PasswordField>
+								<PasswordField fx:id="newPassword">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>
@@ -309,7 +297,7 @@
 										<Insets />
 									</HBox.margin>
 								</Label>
-								<PasswordField>
+								<PasswordField fx:id="confirmPassword">
 									<HBox.margin>
 										<Insets left="10.0" />
 									</HBox.margin>

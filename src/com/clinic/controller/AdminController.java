@@ -1,12 +1,19 @@
 package com.clinic.controller;
 
+import com.clinic.model.MemberModel;
+import com.clinic.model.entities.MemberEntity;
+import com.clinic.model.entities.MemberEntity.Role;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
@@ -39,13 +46,55 @@ public class AdminController {
 	private VBox adVbAddDoctor;
 
 	@FXML
+	private TextField memberId;
+
+	@FXML
+	private TextField memberName;
+
+	@FXML
+	private TextField idendityCard;
+
+	@FXML
+	private DatePicker dateOfBirth;
+
+	@FXML
+	private RadioButton doctorRbt;
+
+	@FXML
+	private RadioButton receptionistRbt;
+
+	@FXML
+	private RadioButton adminRbt;
+
+	@FXML
+	private TextField memberAddress;
+
+	@FXML
+	private TextField memberPhone;
+
+	@FXML
+	private TextField memberEmail;
+
+	@FXML
+	private PasswordField memberPassword;
+
+	@FXML
+	private RadioButton memberMale;
+
+	@FXML
+	private RadioButton memberFemale;
+
+	@FXML
+	private TableView<MemberEntity> memberTable;
+
+	@FXML
 	private VBox adVbViewDoctor;
 
 	@FXML
 	private TextField doctorName;
 
 	@FXML
-	private TableView<?> doctorTable;
+	private TableView<MemberEntity> doctorTable;
 
 	@FXML
 	private VBox adVbViewReceptionist;
@@ -60,7 +109,21 @@ public class AdminController {
 	private TextField patientName;
 
 	@FXML
+	private TableView<MemberEntity> patientTable;
+
+	@FXML
 	private VBox adChangePassword;
+
+	@FXML
+	private PasswordField oldPassword;
+
+	@FXML
+	private PasswordField newPassword;
+
+	@FXML
+	private PasswordField confirmPassword;
+
+	private MemberEntity member;
 
 	@FXML
 	void EditMenu() {
@@ -162,5 +225,39 @@ public class AdminController {
 	@FXML
 	void updatePassword(ActionEvent event) {
 
+	}
+
+	@FXML
+	void clear(ActionEvent event) {
+
+	}
+
+	@FXML
+	void createMember(ActionEvent event) {
+		member = new MemberEntity();
+		//member.setId(Integer.parseInt(memberId.getText()));
+		member.setName(memberName.getText());
+		member.setIdentityCard(idendityCard.getText());
+		member.setDateOfBirth(dateOfBirth.getValue().toString());
+		member.setAddress(memberAddress.getText());
+		member.setPhoneNumber(memberPhone.getText());
+		member.setEmail(memberEmail.getText());
+		member.setPassword(memberPassword.getText());
+		if (adminRbt.isSelected()) {
+			member.setRole(Role.Admin);
+		} else if (receptionistRbt.isSelected()) {
+			member.setRole(Role.Receptionist);
+		} else if (doctorRbt.isSelected()) {
+			member.setRole(Role.Doctor);
+		}
+		if (memberMale.isSelected()){
+			member.setGender("Male");
+		}else if (memberFemale.isSelected()) {
+			member.setGender("Female");
+		}
+		
+		MemberModel model = new MemberModel();
+		model.create(member);
+		System.out.println("created success...");
 	}
 }
