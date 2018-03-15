@@ -35,8 +35,11 @@ public class AdminController {
 
 	@FXML
 	private MenuItem viewDoctor;
-
+	
+	 @FXML
+	    private VBox viewDoctorImg;
 	@FXML
+	
 	private MenuItem viewReception;
 
 	@FXML
