@@ -41,7 +41,7 @@
 		</HBox>
 		<HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
 			<children>
-				<Button mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="Login">
+				<Button mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="60.0" text="Login">
 					<HBox.margin>
 						<Insets right="10.0" />
 					</HBox.margin>

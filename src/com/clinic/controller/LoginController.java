@@ -39,8 +39,6 @@ public class LoginController {
 	@FXML
 	private RadioButton receptionRole;
 
-	private MemberModel memberModel;
-
 	@FXML
 	void close(ActionEvent event) {
 		Platform.exit();
@@ -63,6 +61,7 @@ public class LoginController {
 	void login(ActionEvent event) {
 		try {
 			String str = null;
+			MemberModel memberModel = new MemberModel();
 			MemberEntity member = memberModel.loginFind(userName.getText(), password.getText());
 			if (member.getRole() == Role.Admin) {
 				str = "../view/Admin.fxml";
