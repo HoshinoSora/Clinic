@@ -22,15 +22,15 @@
 
 <VBox fx:id="admin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinic.controller.AdminController">
 	<children>
-		<MenuBar fx:id="AdMenu" cache="true" prefHeight="20.0" stylesheets="@application.css">
+		<MenuBar cache="true" prefHeight="20.0" stylesheets="@application.css">
 			<menus>
-				<Menu fx:id="AdMenulabel" mnemonicParsing="false" onAction="#EditMenu" text="Edit">
+				<Menu mnemonicParsing="false" onAction="#EditMenu" text="Edit">
                <items>
                   <MenuItem fx:id="addMember" mnemonicParsing="false" text="Add Member" />
                   <MenuItem fx:id="changePassword" mnemonicParsing="false" text="Change Password" />
                   <MenuItem fx:id="logout" mnemonicParsing="false" text="Logout" />
                </items></Menu>
-				<Menu fx:id="AdMenulabel" mnemonicParsing="false" onAction="#ViewMenu" text="View">
+				<Menu  mnemonicParsing="false" onAction="#ViewMenu" text="View">
                <items>
                   <MenuItem fx:id="viewDoctor" mnemonicParsing="false" text="View Doctor" />
                   <MenuItem fx:id="viewReception" mnemonicParsing="false" text="View Receptionist" />
@@ -53,18 +53,15 @@
 		</MenuBar>
 		<StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
 			<children>
-<<<<<<< HEAD
 				<VBox fx:id="adVbAddDoctor" prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css" visible="false">
-=======
 				<VBox fx:id="adVbAddDoctor" prefHeight="200.0" prefWidth="100.0">
->>>>>>> 59cba8b740299cd15c1c41634b1bbc8d27d8ddb6
 					<children>
-						<Label fx:id="addMemLab" alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="80.0" prefWidth="700.0" stylesheets="@application.css" text="Add Member" textFill="#4028f7">
+						<Label alignment="CENTER" contentDisplay="CENTER" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="80.0" prefWidth="700.0" stylesheets="@application.css" text="Add Member" textFill="#4028f7">
 							<VBox.margin>
 								<Insets />
 							</VBox.margin>
 							<graphic>
-								<Label fx:id="addAboveLab" alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Robot Diversity Clinic Management System" textFill="#1426eb">
+								<Label  alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="650.0" text="Robot Diversity Clinic Management System" textFill="#1426eb">
                            <font>
                               <Font name="Bauhaus 93" size="12.0" />
                            </font>
@@ -74,7 +71,7 @@
                         <Font name="Bauhaus 93" size="24.0" />
                      </font>
 						</Label>
-						<VBox fx:id="AddMemberVb" prefHeight="300.0" prefWidth="700.0">
+						<VBox  prefHeight="300.0" prefWidth="700.0">
 							<children>
                         <HBox alignment="CENTER" prefHeight="300.0" prefWidth="700.0">
                            <children>
@@ -82,69 +79,54 @@
                                  <children>
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
-<<<<<<< HEAD
-            										<Label fx:id="lab" prefWidth="100.0" text="       Member ID     " />
+            										<Label  prefWidth="100.0" text="       Member ID     " />
             										<TextField />
-=======
             										<Label prefWidth="100.0" text="       Member ID     " />
             										<TextField fx:id="memberId" />
->>>>>>> 59cba8b740299cd15c1c41634b1bbc8d27d8ddb6
             									</children>
             								</HBox>
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
-<<<<<<< HEAD
-            										<Label fx:id="lab" prefWidth="100.0" text="       Name     " />
+            										<Label  prefWidth="100.0" text="       Name     " />
             										<TextField />
-=======
             										<Label prefWidth="100.0" text="       Name     " />
             										<TextField fx:id="memberName" />
->>>>>>> 59cba8b740299cd15c1c41634b1bbc8d27d8ddb6
             									</children>
             								</HBox>
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
-<<<<<<< HEAD
-            										<Label fx:id="lab" prefWidth="100.0" text="       Identity Card" />
+            										<Label  prefWidth="100.0" text="       Identity Card" />
             										<TextField />
-=======
             										<Label prefWidth="100.0" text="       Identity Card" />
             										<TextField fx:id="idendityCard" />
->>>>>>> 59cba8b740299cd15c1c41634b1bbc8d27d8ddb6
             									</children>
             								</HBox>
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
-<<<<<<< HEAD
-            										<Label fx:id="lab" prefWidth="100.0" text="       Date Of Birth" />
+            										<Label  prefWidth="100.0" text="       Date Of Birth" />
             										<DatePicker />
-=======
             										<Label prefWidth="100.0" text="       Date Of Birth" />
             										<DatePicker fx:id="dateOfBirth" />
->>>>>>> 59cba8b740299cd15c1c41634b1bbc8d27d8ddb6
             									</children>
             								</HBox>
             								<HBox prefHeight="100.0" prefWidth="200.0" stylesheets="@application.css">
             									<children>
-<<<<<<< HEAD
-            										<Label fx:id="lab" prefWidth="100.0" text="       Position" />
-            										<RadioButton fx:id="labatt" mnemonicParsing="false" text="Doctor" textFill="#1d77dd" />
-            										<RadioButton fx:id="labatt" mnemonicParsing="false" text="Receptionist" textFill="#1d77dd">
+            										<Label  prefWidth="100.0" text="       Position" />
+            										<RadioButton mnemonicParsing="false" text="Doctor" textFill="#1d77dd" />
+            										<RadioButton mnemonicParsing="false" text="Receptionist" textFill="#1d77dd">
             											<HBox.margin>
             												<Insets left="10.0" />
             											</HBox.margin>
             										</RadioButton>
-            										<RadioButton fx:id="labatt" mnemonicParsing="false" text="Admin" textFill="#1d77dd">
+            										<RadioButton mnemonicParsing="false" text="Admin" textFill="#1d77dd">
             											<HBox.margin>
             												<Insets left="10.0" />
             											</HBox.margin>
             										</RadioButton>
-=======
             										<Label prefWidth="100.0" text="       Position" />
             										<RadioButton fx:id="doctorRbt" mnemonicParsing="false" text="Doctor" />
             										<RadioButton fx:id="receptionistRbt" mnemonicParsing="false" text="Receptionist" />
             										<RadioButton fx:id="adminRbt" mnemonicParsing="false" text="Admin" />
->>>>>>> 59cba8b740299cd15c1c41634b1bbc8d27d8ddb6
             									</children>
             								</HBox>
                                  </children>
@@ -153,13 +135,10 @@
                                  <children>
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
-<<<<<<< HEAD
-            										<Label fx:id="lab" prefWidth="100.0" text="       Address" />
+            										<Label  prefWidth="100.0" text="       Address" />
             										<TextField>
-=======
             										<Label prefWidth="100.0" text="       Address" />
             										<TextField fx:id="memberAddress">
->>>>>>> 59cba8b740299cd15c1c41634b1bbc8d27d8ddb6
             											<HBox.margin>
             												<Insets right="50.0" />
             											</HBox.margin>
@@ -168,13 +147,10 @@
             								</HBox>
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
-<<<<<<< HEAD
-            										<Label fx:id="lab" prefWidth="100.0" text="       Phone No" />
+            										<Label  prefWidth="100.0" text="       Phone No" />
             										<TextField>
-=======
             										<Label prefWidth="100.0" text="       Phone No" />
             										<TextField fx:id="memberPhone">
->>>>>>> 59cba8b740299cd15c1c41634b1bbc8d27d8ddb6
             											<HBox.margin>
             												<Insets right="50.0" />
             											</HBox.margin>
@@ -183,13 +159,10 @@
             								</HBox>
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
-<<<<<<< HEAD
-            										<Label fx:id="lab" prefWidth="100.0" text="       Email Address" />
+            										<Label  prefWidth="100.0" text="       Email Address" />
             										<TextField>
-=======
             										<Label prefWidth="100.0" text="       Email Address" />
             										<TextField fx:id="memberEmail">
->>>>>>> 59cba8b740299cd15c1c41634b1bbc8d27d8ddb6
             											<HBox.margin>
             												<Insets right="50.0" />
             											</HBox.margin>
@@ -198,21 +171,12 @@
             								</HBox>
             								<HBox prefHeight="100.0" prefWidth="200.0">
             									<children>
-<<<<<<< HEAD
-            										<Label fx:id="lab" prefWidth="100.0" text="       Password" />
             										<PasswordField />
-=======
-            										<Label prefWidth="100.0" text="       Password" />
             										<PasswordField fx:id="memberPassword" />
->>>>>>> 59cba8b740299cd15c1c41634b1bbc8d27d8ddb6
             									</children>
             								</HBox>
             								<HBox prefHeight="100.0" prefWidth="200.0" stylesheets="@application.css">
             									<children>
-<<<<<<< HEAD
-            										<Label fx:id="lab" prefWidth="100.0" text="       Gender" />
-            										<RadioButton fx:id="labatt" mnemonicParsing="false" prefWidth="70.0" text="Male" textFill="#1d77dd" />
-            										<RadioButton fx:id="labatt" mnemonicParsing="false" text="Female" textFill="#1d77dd">
             											<HBox.margin>
             												<Insets right="70.0" />
             											</HBox.margin>
@@ -230,7 +194,6 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
                            <children>
-<<<<<<< HEAD
                               <Button fx:id="adBtn" mnemonicParsing="false" prefHeight="35.0" prefWidth="60.0" text="INSERT" />
                               <Button fx:id="adBtn" mnemonicParsing="false" prefHeight="35.0" prefWidth="60.0" text="CLEAR" />
 =======
@@ -527,7 +490,6 @@
 							</children>
 						</HBox>
 						<Button mnemonicParsing="false" onAction="#updatePassword" prefWidth="60.0" text="Submit" />
->>>>>>> 59cba8b740299cd15c1c41634b1bbc8d27d8ddb6
 					</children>
 				</VBox>
 			</children>
