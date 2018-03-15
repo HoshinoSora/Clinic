@@ -17,10 +17,10 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class LoginController {
-	
+
 	@FXML
 	private VBox home;
-	
+
 	@FXML
 	private VBox login;
 
@@ -38,8 +38,6 @@ public class LoginController {
 
 	@FXML
 	private RadioButton receptionRole;
-
-	private MemberModel memberModel;
 
 	@FXML
 	void close(ActionEvent event) {
@@ -63,6 +61,7 @@ public class LoginController {
 	void login(ActionEvent event) {
 		try {
 			String str = null;
+			MemberModel memberModel = new MemberModel();
 			MemberEntity member = memberModel.loginFind(userName.getText(), password.getText());
 			if (member.getRole() == Role.Admin) {
 				str = "../view/Admin.fxml";

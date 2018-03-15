@@ -12,12 +12,12 @@
 	<children>
 		<VBox alignment="CENTER">
 			<children>
-				<Label fx:id="loginLabel1" alignment="CENTER" prefHeight="80.0" prefWidth="600.0" text="Login" />
+				<Label alignment="CENTER" prefHeight="80.0" prefWidth="600.0" text="Login" />
 			</children>
 		</VBox>
 		<HBox alignment="CENTER" prefHeight="80.0">
 			<children>
-				<Label fx:id="loginlabel2" text="Username   :    ">
+				<Label text="Username   :    ">
 					<HBox.margin>
 						<Insets />
 					</HBox.margin>
@@ -41,12 +41,12 @@
 		</HBox>
 		<HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
 			<children>
-				<Button fx:id="btn" mnemonicParsing="false" prefHeight="40.0" prefWidth="70.0" text="Login">
+				<Button mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="60.0" text="Login">
 					<HBox.margin>
 						<Insets right="10.0" />
 					</HBox.margin>
 				</Button>
-				<Button fx:id="btn" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="70.0" text="Exit">
+				<Button mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="60.0" text="Exit">
 					<HBox.margin>
 						<Insets left="10.0" />
 					</HBox.margin>
