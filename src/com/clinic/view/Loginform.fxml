@@ -41,12 +41,12 @@
 		</HBox>
 		<HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
 			<children>
-				<Button mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="Login">
+				<Button fx:id="btn" mnemonicParsing="false" prefHeight="40.0" prefWidth="70.0" text="Login">
 					<HBox.margin>
 						<Insets right="10.0" />
 					</HBox.margin>
 				</Button>
-				<Button mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="60.0" text="Exit">
+				<Button fx:id="btn" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="70.0" text="Exit">
 					<HBox.margin>
 						<Insets left="10.0" />
 					</HBox.margin>
